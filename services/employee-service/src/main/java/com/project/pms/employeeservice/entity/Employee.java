@@ -1,6 +1,9 @@
 package com.project.pms.employeeservice.entity;
 
 import java.util.Date;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "employees")

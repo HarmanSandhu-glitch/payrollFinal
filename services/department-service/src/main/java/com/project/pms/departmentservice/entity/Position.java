@@ -1,5 +1,7 @@
 package com.project.pms.departmentservice.entity;
 
+import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "positions")

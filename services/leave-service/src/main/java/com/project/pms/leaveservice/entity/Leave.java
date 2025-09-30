@@ -1,7 +1,8 @@
 package com.project.pms.leaveservice.entity;
 
 import java.time.LocalDate;
-
+import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "leaves")

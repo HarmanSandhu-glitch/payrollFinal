@@ -1,6 +1,7 @@
 package com.project.pms.payrollservice.dto;
 
 import java.util.Date;
+import lombok.Data;
 
 @Data
 public class Employee {

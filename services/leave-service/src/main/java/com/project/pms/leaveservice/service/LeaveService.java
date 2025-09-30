@@ -3,6 +3,8 @@ package com.project.pms.leaveservice.service;
 import com.project.pms.leaveservice.entity.Leave;
 import com.project.pms.leaveservice.repository.LeaveRepository;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 
 @Service

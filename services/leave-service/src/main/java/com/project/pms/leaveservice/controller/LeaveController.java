@@ -3,6 +3,9 @@ package com.project.pms.leaveservice.controller;
 import com.project.pms.leaveservice.entity.Leave;
 import com.project.pms.leaveservice.service.LeaveService;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController

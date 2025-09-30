@@ -4,6 +4,8 @@ import com.project.pms.employeeservice.entity.Employee;
 import com.project.pms.employeeservice.repository.EmployeeRepository;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class EmployeeService {

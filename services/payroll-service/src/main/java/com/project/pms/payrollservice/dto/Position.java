@@ -1,6 +1,7 @@
 package com.project.pms.payrollservice.dto;
 
 
+import lombok.Data;
 @Data
 public class Position {
     private Long positionId;
