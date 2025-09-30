@@ -225,18 +225,28 @@ function deletePosition(id) {
 function generatePayroll(event) {
     event.preventDefault();
     const employeeId = document.getElementById('payrollEmployeeId').value;
-    const deductions = document.getElementById('deductions').value;
+    let deductions = document.getElementById('deductions').value;
+
+    // If deductions is empty or not a valid number, default to 0
+    if (deductions === '' || isNaN(parseFloat(deductions))) {
+        deductions = 0;
+    }
+
     const payload = { deductions: parseFloat(deductions) };
 
     fetch(`/api/payroll/generate/${employeeId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
-    }).then(() => {
-        alert('Payroll generated successfully!');
+    }).then(response => {
+        if (response.ok) {
+            alert('Payroll generated successfully!');
+        } else {
+            alert('Failed to generate payroll. Please check the console for more details.');
+            console.error('Error generating payroll:', response);
+        }
     });
 }
-
 function viewPayroll(event) {
     event.preventDefault();
     const employeeId = document.getElementById('viewPayrollEmployeeId').value;
