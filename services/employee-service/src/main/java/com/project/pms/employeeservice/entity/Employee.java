@@ -4,6 +4,7 @@ import java.util.Date;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Data;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "employees")

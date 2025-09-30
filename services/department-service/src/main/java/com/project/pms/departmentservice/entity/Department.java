@@ -25,7 +25,6 @@ public class Department {
     @Column(nullable = false, unique = true)
     private String departmentName;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "department_id")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "department")
     private Set<Position> departmentPositions;
 }

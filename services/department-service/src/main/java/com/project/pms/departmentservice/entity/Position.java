@@ -12,6 +12,10 @@ public class Position {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long positionId;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "departmentId")
+    private Department department;
+
     @Column(nullable = false)
     private String positionTitle;
 
