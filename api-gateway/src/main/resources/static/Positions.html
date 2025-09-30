@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Positions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Payroll Management System</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="employees.html">Employees</a>
+        <a href="departments.html">Departments</a>
+        <a href="positions.html">Positions</a>
+        <a href="payroll.html">Payroll</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="leaves.html">Leaves</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Manage Positions</h2>
+    <div class="button-container">
+        <button onclick="showAddPositionForm()">Add New Position</button>
+    </div>
+
+    <div id="positionForm">
+        <form onsubmit="submitPositionForm(event)">
+            <h3>Position Details</h3>
+            <input type="hidden" id="positionId">
+            <label for="positionTitle">Position Title</label>
+            <input type="text" id="positionTitle" required>
+            <label for="positionBaseSalary">Base Salary</label>
+            <input type="number" id="positionBaseSalary" required>
+            <label for="positionExperienceBonus">Experience Bonus</label>
+            <input type="number" id="positionExperienceBonus" required>
+            <button type="submit">Save Position</button>
+            <button type="button" onclick="hidePositionForm()">Cancel</button>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <table id="positionsTable">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Base Salary</th>
+                <th>Experience Bonus</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<script src="script.js"></script>
+<script>
+    window.onload = loadPositions;
+</script>
+</body>
+</html>

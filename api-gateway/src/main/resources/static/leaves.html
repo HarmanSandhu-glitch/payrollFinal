@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Leaves</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Payroll Management System</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="employees.html">Employees</a>
+        <a href="departments.html">Departments</a>
+        <a href="positions.html">Positions</a>
+        <a href="payroll.html">Payroll</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="leaves.html">Leaves</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Manage Leaves</h2>
+
+    <div class="form-container">
+        <form onsubmit="applyForLeave(event)">
+            <h3>Apply for Leave</h3>
+            <label for="leaveEmployeeId">Select Employee</label>
+            <select id="leaveEmployeeId" required></select>
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" required>
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" required>
+            <label for="reason">Reason</label>
+            <input type="text" id="reason">
+            <button type="submit">Apply</button>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <h3>All Leave Requests</h3>
+        <table id="leavesTable">
+            <thead>
+            <tr>
+                <th>Employee</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

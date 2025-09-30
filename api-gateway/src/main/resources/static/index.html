@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Payroll Management System</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="employees.html">Employees</a>
+        <a href="departments.html">Departments</a>
+        <a href="positions.html">Positions</a>
+        <a href="payroll.html">Payroll</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="leaves.html">Leaves</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Manage Attendance</h2>
+    <div class="form-container">
+        <form id="attendanceForm">
+            <h3>Mark Attendance</h3>
+            <label for="attendanceEmployeeId">Select Employee</label>
+            <select id="attendanceEmployeeId" required></select>
+            <button type="button" onclick="checkIn()">Check-In</button>
+            <button type="button" onclick="checkOut()">Check-Out</button>
+        </form>
+    </div>
+</main>
+
+<script src="script.js"></script>
+<script>
+    window.onload = function() {
+        loadEmployeesDropdown('attendanceEmployeeId');
+    };
+
+    function checkIn() {
+        const employeeId = document.getElementById('attendanceEmployeeId').value;
+        fetch(`/api/attendance/checkin/${employeeId}`, { method: 'POST' })
+            .then(response => {
+                if(response.ok) alert('Checked-in successfully!');
+                else alert('Check-in failed!');
+            });
+    }
+
+    function checkOut() {
+        const employeeId = document.getElementById('attendanceEmployeeId').value;
+        fetch(`/api/attendance/checkout/${employeeId}`, { method: 'POST' })
+            .then(response => {
+                if(response.ok) alert('Checked-out successfully!');
+                else alert('Check-out failed!');
+            });
+    }
+</script>
+</body>
+</html>

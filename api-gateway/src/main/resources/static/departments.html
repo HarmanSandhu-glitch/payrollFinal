@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Departments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Payroll Management System</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="employees.html">Employees</a>
+        <a href="departments.html">Departments</a>
+        <a href="positions.html">Positions</a>
+        <a href="payroll.html">Payroll</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="leaves.html">Leaves</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Manage Departments</h2>
+    <div class="button-container">
+        <button onclick="showAddDepartmentForm()">Add New Department</button>
+    </div>
+
+    <div id="departmentForm">
+        <form onsubmit="submitDepartmentForm(event)">
+            <h3>Department Details</h3>
+            <input type="hidden" id="departmentId">
+            <label for="departmentName">Department Name</label>
+            <input type="text" id="departmentName" required>
+            <button type="submit">Save Department</button>
+            <button type="button" onclick="hideDepartmentForm()">Cancel</button>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <table id="departmentsTable">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<script src="script.js"></script>
+<script>
+    window.onload = loadDepartments;
+</script>
+</body>
+</html>
