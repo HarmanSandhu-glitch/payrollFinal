@@ -365,22 +365,36 @@ function applyForLeave(event) {
 
 function loadAllLeaveRequests() {
     fetch('/api/leaves')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            return response.json();
+        })
         .then(data => {
             const tableBody = document.getElementById('leavesTable').getElementsByTagName('tbody')[0];
             tableBody.innerHTML = '';
-            data.forEach(leave => {
-                let row = tableBody.insertRow();
-                row.insertCell(0).innerHTML = leave.employee.employeeName;
-                row.insertCell(1).innerHTML = new Date(leave.startDate).toLocaleDateString();
-                row.insertCell(2).innerHTML = new Date(leave.endDate).toLocaleDateString();
-                row.insertCell(3).innerHTML = leave.reason;
-                row.insertCell(4).innerHTML = leave.status;
-                row.insertCell(5).innerHTML = `
-                    <button onclick="updateLeaveStatus(${leave.leaveId}, 'APPROVED')">Approve</button>
-                    <button onclick="updateLeaveStatus(${leave.leaveId}, 'REJECTED')">Reject</button>
-                `;
-            });
+            if (Array.isArray(data)) {
+                data.forEach(leave => {
+                    let row = tableBody.insertRow();
+                    row.insertCell(0).innerHTML = `Employee ID: ${leave.employeeId}`;
+                    row.insertCell(1).innerHTML = new Date(leave.startDate).toLocaleDateString();
+                    row.insertCell(2).innerHTML = new Date(leave.endDate).toLocaleDateString();
+                    row.insertCell(3).innerHTML = leave.reason;
+                    row.insertCell(4).innerHTML = leave.status;
+                    row.insertCell(5).innerHTML = `
+                        <button onclick="updateLeaveStatus(${leave.leaveId}, 'APPROVED')">Approve</button>
+                        <button onclick="updateLeaveStatus(${leave.leaveId}, 'REJECTED')">Reject</button>
+                    `;
+                });
+            } else {
+                console.error('Expected array but received:', data);
+            }
+        })
+        .catch(error => {
+            console.error('Error loading leave requests:', error);
+            const tableBody = document.getElementById('leavesTable').getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = '<tr><td colspan="6">Error loading leave requests. Please try again.</td></tr>';
         });
 }
 

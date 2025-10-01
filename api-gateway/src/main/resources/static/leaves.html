@@ -57,5 +57,51 @@
 </main>
 
 <script src="script.js"></script>
+<script>
+    window.onload = function() {
+        loadEmployeesDropdown('leaveEmployeeId');
+        loadAllLeaveRequests();
+    };
+
+    function applyForLeave(event) {
+        event.preventDefault();
+        const employeeId = document.getElementById('leaveEmployeeId').value;
+        
+        if (!employeeId || employeeId === '') {
+            alert('Please select an employee first!');
+            return;
+        }
+
+        const leave = {
+            startDate: document.getElementById('startDate').value,
+            endDate: document.getElementById('endDate').value,
+            reason: document.getElementById('reason').value
+        };
+
+        fetch(`/api/leaves/apply/${employeeId}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(leave)
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Leave application submitted successfully!');
+                document.getElementById('leaveEmployeeId').value = '';
+                document.getElementById('startDate').value = '';
+                document.getElementById('endDate').value = '';
+                document.getElementById('reason').value = '';
+                loadAllLeaveRequests(); // Refresh the table
+                return response.json();
+            } else {
+                alert('Failed to submit leave application!');
+                console.error('Leave submission failed:', response.status, response.statusText);
+            }
+        })
+        .catch(error => {
+            alert('Leave submission error: ' + error.message);
+            console.error('Leave submission error:', error);
+        });
+    }
+</script>
 </body>
 </html>

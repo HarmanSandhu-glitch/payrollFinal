@@ -7,66 +7,64 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2025-10-01T08:07:43.765+05:30  INFO 157418 --- [           main] c.p.p.d.DepartmentServiceApplication     : Starting DepartmentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 157418 (/home/harmn/Pictures/apc/services/department-service/target/department-service-0.0.1-SNAPSHOT.jar started by harmn in /home/harmn/Pictures/apc/services/department-service)
-2025-10-01T08:07:43.770+05:30  INFO 157418 --- [           main] c.p.p.d.DepartmentServiceApplication     : No active profile set, falling back to 1 default profile: "default"
-2025-10-01T08:07:45.442+05:30  INFO 157418 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-01T08:07:45.750+05:30  INFO 157418 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 291 ms. Found 2 JPA repository interfaces.
-2025-10-01T08:07:46.138+05:30  INFO 157418 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=53319bf5-a76b-37dd-b5e8-ddde52eb0bdf
-2025-10-01T08:07:46.937+05:30  INFO 157418 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-2025-10-01T08:07:46.969+05:30  INFO 157418 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-01T08:07:46.970+05:30  INFO 157418 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2025-10-01T08:07:47.145+05:30  INFO 157418 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-01T08:07:47.148+05:30  INFO 157418 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3219 ms
-2025-10-01T08:07:47.469+05:30  INFO 157418 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-01T08:07:47.624+05:30  INFO 157418 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
-2025-10-01T08:07:47.633+05:30  INFO 157418 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2025-10-01T08:07:48.296+05:30  INFO 157418 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-01T08:07:48.395+05:30  INFO 157418 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-01T08:07:48.746+05:30  INFO 157418 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@150d80c4
-2025-10-01T08:07:48.753+05:30  INFO 157418 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-01T08:07:50.839+05:30  INFO 157418 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-01T08:07:50.927+05:30  INFO 157418 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-01T08:07:51.445+05:30  WARN 157418 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-01T08:07:52.344+05:30  INFO 157418 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-10-01T08:07:52.709+05:30  INFO 157418 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-10-01T08:07:52.942+05:30  INFO 157418 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-10-01T08:07:52.958+05:30  INFO 157418 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-10-01T08:07:53.030+05:30  INFO 157418 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-10-01T08:07:53.030+05:30  INFO 157418 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-10-01T08:07:53.030+05:30  INFO 157418 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-10-01T08:07:53.030+05:30  INFO 157418 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-10-01T08:07:53.030+05:30  INFO 157418 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-10-01T08:07:53.030+05:30  INFO 157418 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-10-01T08:07:53.030+05:30  INFO 157418 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-10-01T08:07:54.438+05:30  INFO 157418 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-10-01T08:07:54.450+05:30  INFO 157418 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-10-01T08:07:54.463+05:30  INFO 157418 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-10-01T08:07:54.487+05:30  INFO 157418 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759286274481 with initial instances count: 0
-2025-10-01T08:07:54.502+05:30  INFO 157418 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DEPARTMENT-SERVICE with eureka with status UP
-2025-10-01T08:07:54.506+05:30  INFO 157418 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759286274506, current=UP, previous=STARTING]
-2025-10-01T08:07:54.524+05:30  INFO 157418 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DEPARTMENT-SERVICE/192.168.1.72:department-service:8082: registering service...
-2025-10-01T08:07:54.638+05:30  INFO 157418 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-2025-10-01T08:07:54.650+05:30  INFO 157418 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
-2025-10-01T08:07:54.707+05:30  INFO 157418 --- [           main] c.p.p.d.DepartmentServiceApplication     : Started DepartmentServiceApplication in 11.965 seconds (process running for 13.094)
-2025-10-01T08:07:54.788+05:30  INFO 157418 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 - registration status: 204
-2025-10-01T08:08:24.450+05:30  INFO 157418 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-10-01T08:08:24.450+05:30  INFO 157418 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-10-01T08:08:24.450+05:30  INFO 157418 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-10-01T08:08:24.450+05:30  INFO 157418 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-10-01T08:08:24.451+05:30  INFO 157418 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-10-01T08:08:24.451+05:30  INFO 157418 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
-2025-10-01T08:08:24.451+05:30  INFO 157418 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-10-01T08:08:24.481+05:30  INFO 157418 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-10-01T08:08:46.012+05:30  INFO 157418 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-01T08:08:46.013+05:30  INFO 157418 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-01T08:08:46.016+05:30  INFO 157418 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0 where p1_0.position_id=?
-2025-10-01T08:12:53.045+05:30  INFO 157418 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-10-01T08:13:40.652+05:30  INFO 157418 --- [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DEPARTMENT-SERVICE with eureka with status DOWN
-2025-10-01T08:13:40.653+05:30  INFO 157418 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759286620653, current=DOWN, previous=UP]
-2025-10-01T08:13:40.654+05:30  INFO 157418 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DEPARTMENT-SERVICE/192.168.1.72:department-service:8082: registering service...
-2025-10-01T08:13:40.674+05:30  INFO 157418 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 - registration status: 204
-2025-10-01T08:13:40.787+05:30  INFO 157418 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-10-01T08:13:40.835+05:30  INFO 157418 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-10-01T08:13:40.868+05:30  INFO 157418 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-10-01T08:13:40.869+05:30  INFO 157418 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-10-01T08:33:23.928+05:30  INFO 171855 --- [           main] c.p.p.d.DepartmentServiceApplication     : Starting DepartmentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 171855 (/home/harmn/Pictures/apc/services/department-service/target/department-service-0.0.1-SNAPSHOT.jar started by harmn in /home/harmn/Pictures/apc/services/department-service)
+2025-10-01T08:33:23.934+05:30  INFO 171855 --- [           main] c.p.p.d.DepartmentServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T08:33:25.476+05:30  INFO 171855 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-01T08:33:25.802+05:30  INFO 171855 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 308 ms. Found 2 JPA repository interfaces.
+2025-10-01T08:33:26.403+05:30  INFO 171855 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=53319bf5-a76b-37dd-b5e8-ddde52eb0bdf
+2025-10-01T08:33:27.829+05:30  INFO 171855 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2025-10-01T08:33:27.860+05:30  INFO 171855 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T08:33:27.861+05:30  INFO 171855 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-10-01T08:33:28.050+05:30  INFO 171855 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T08:33:28.053+05:30  INFO 171855 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3988 ms
+2025-10-01T08:33:28.517+05:30  INFO 171855 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-01T08:33:28.653+05:30  INFO 171855 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2025-10-01T08:33:28.656+05:30  INFO 171855 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-10-01T08:33:29.086+05:30  INFO 171855 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-01T08:33:29.142+05:30  INFO 171855 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T08:33:29.414+05:30  INFO 171855 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@150d80c4
+2025-10-01T08:33:29.420+05:30  INFO 171855 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T08:33:30.845+05:30  INFO 171855 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-01T08:33:30.907+05:30  INFO 171855 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T08:33:31.338+05:30  WARN 171855 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-01T08:33:32.409+05:30  INFO 171855 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-10-01T08:33:32.886+05:30  INFO 171855 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-10-01T08:33:33.188+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-10-01T08:33:33.214+05:30  INFO 171855 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-10-01T08:33:33.320+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-10-01T08:33:33.321+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-10-01T08:33:33.324+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-10-01T08:33:33.324+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-10-01T08:33:33.324+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-10-01T08:33:33.324+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-10-01T08:33:33.324+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-10-01T08:33:34.548+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-10-01T08:33:34.569+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-10-01T08:33:34.576+05:30  INFO 171855 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-10-01T08:33:34.588+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759287814586 with initial instances count: 5
+2025-10-01T08:33:34.594+05:30  INFO 171855 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DEPARTMENT-SERVICE with eureka with status UP
+2025-10-01T08:33:34.595+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759287814595, current=UP, previous=STARTING]
+2025-10-01T08:33:34.601+05:30  INFO 171855 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DEPARTMENT-SERVICE/192.168.1.72:department-service:8082: registering service...
+2025-10-01T08:33:34.641+05:30  INFO 171855 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2025-10-01T08:33:34.643+05:30  INFO 171855 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2025-10-01T08:33:34.666+05:30  INFO 171855 --- [           main] c.p.p.d.DepartmentServiceApplication     : Started DepartmentServiceApplication in 11.934 seconds (process running for 13.241)
+2025-10-01T08:33:34.702+05:30  INFO 171855 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 - registration status: 204
+2025-10-01T08:34:50.304+05:30  INFO 171855 --- [nio-8082-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-01T08:34:50.306+05:30  INFO 171855 --- [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-01T08:34:50.313+05:30  INFO 171855 --- [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+2025-10-01T08:38:33.351+05:30  INFO 171855 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?

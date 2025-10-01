@@ -7,90 +7,126 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2025-10-01T08:07:23.360+05:30  INFO 157090 --- [           main] c.p.p.d.DiscoveryServiceApplication      : Starting DiscoveryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 157090 (/home/harmn/Pictures/apc/discovery-service/target/discovery-service-0.0.1-SNAPSHOT.jar started by harmn in /home/harmn/Pictures/apc/discovery-service)
-2025-10-01T08:07:23.367+05:30  INFO 157090 --- [           main] c.p.p.d.DiscoveryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-10-01T08:07:25.348+05:30  INFO 157090 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6c38099d-7859-3f6b-b85e-0869d752b195
-2025-10-01T08:07:25.777+05:30  INFO 157090 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
-2025-10-01T08:07:25.790+05:30  INFO 157090 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-01T08:07:25.790+05:30  INFO 157090 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2025-10-01T08:07:25.890+05:30  INFO 157090 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-01T08:07:25.892+05:30  INFO 157090 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2371 ms
-2025-10-01T08:07:27.334+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-10-01T08:07:27.336+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-10-01T08:07:27.589+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-10-01T08:07:27.589+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-10-01T08:07:28.747+05:30  WARN 157090 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-10-01T08:07:28.778+05:30  INFO 157090 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-10-01T08:07:28.817+05:30  INFO 157090 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-10-01T08:07:28.818+05:30  INFO 157090 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
-2025-10-01T08:07:28.831+05:30  INFO 157090 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759286248830 with initial instances count: 0
-2025-10-01T08:07:28.887+05:30  INFO 157090 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2025-10-01T08:07:28.890+05:30  INFO 157090 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
-2025-10-01T08:07:29.078+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-10-01T08:07:29.078+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-10-01T08:07:29.078+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-10-01T08:07:29.078+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-10-01T08:07:29.198+05:30  INFO 157090 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
-2025-10-01T08:07:29.209+05:30  INFO 157090 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2025-10-01T08:07:29.211+05:30  INFO 157090 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2025-10-01T08:07:29.225+05:30  INFO 157090 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2025-10-01T08:07:29.282+05:30  INFO 157090 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
-2025-10-01T08:07:29.319+05:30  INFO 157090 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2025-10-01T08:07:29.320+05:30  INFO 157090 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2025-10-01T08:07:29.321+05:30  INFO 157090 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2025-10-01T08:07:29.321+05:30  INFO 157090 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2025-10-01T08:07:29.321+05:30  INFO 157090 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2025-10-01T08:07:29.325+05:30  INFO 157090 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
-2025-10-01T08:07:29.326+05:30  INFO 157090 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
-2025-10-01T08:07:29.335+05:30  INFO 157090 --- [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2025-10-01T08:07:29.356+05:30  INFO 157090 --- [           main] c.p.p.d.DiscoveryServiceApplication      : Started DiscoveryServiceApplication in 6.831 seconds (process running for 7.754)
-2025-10-01T08:07:46.235+05:30  INFO 157090 --- [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-01T08:07:46.236+05:30  INFO 157090 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-01T08:07:46.239+05:30  INFO 157090 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-10-01T08:07:46.875+05:30  WARN 157090 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: PAYROLL-SERVICE - 192.168.1.72:payroll-service:8083
-2025-10-01T08:07:46.876+05:30  WARN 157090 --- [nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Renew): PAYROLL-SERVICE - 192.168.1.72:payroll-service:8083
-2025-10-01T08:07:46.940+05:30  INFO 157090 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 with status UP (replication=false)
-2025-10-01T08:07:47.075+05:30  INFO 157090 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=false)
-2025-10-01T08:07:47.825+05:30  INFO 157090 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 with status UP (replication=true)
-2025-10-01T08:07:47.827+05:30  INFO 157090 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=true)
-2025-10-01T08:07:54.782+05:30  INFO 157090 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 with status UP (replication=false)
-2025-10-01T08:07:55.298+05:30  INFO 157090 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 with status UP (replication=true)
-2025-10-01T08:08:00.328+05:30  INFO 157090 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=false)
-2025-10-01T08:08:00.350+05:30  INFO 157090 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 (replication=false)
-2025-10-01T08:08:00.855+05:30  INFO 157090 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=true)
-2025-10-01T08:08:00.858+05:30  INFO 157090 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 (replication=true)
-2025-10-01T08:08:05.556+05:30  INFO 157090 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084 with status UP (replication=false)
-2025-10-01T08:08:06.071+05:30  INFO 157090 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084 with status UP (replication=true)
-2025-10-01T08:08:07.537+05:30  INFO 157090 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance LEAVE-SERVICE/192.168.1.72:leave-service:8085 with status UP (replication=false)
-2025-10-01T08:08:08.053+05:30  INFO 157090 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance LEAVE-SERVICE/192.168.1.72:leave-service:8085 with status UP (replication=true)
-2025-10-01T08:08:17.092+05:30  WARN 157090 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: PAYROLL-SERVICE - 192.168.1.72:payroll-service:8083
-2025-10-01T08:08:17.092+05:30  WARN 157090 --- [nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Renew): PAYROLL-SERVICE - 192.168.1.72:payroll-service:8083
-2025-10-01T08:08:17.120+05:30  INFO 157090 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=false)
-2025-10-01T08:08:17.637+05:30  INFO 157090 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=true)
-2025-10-01T08:08:23.109+05:30  INFO 157090 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status UP (replication=false)
-2025-10-01T08:08:23.624+05:30  INFO 157090 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status UP (replication=true)
-2025-10-01T08:08:29.323+05:30  INFO 157090 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-01T08:09:29.323+05:30  INFO 157090 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-01T08:10:29.323+05:30  INFO 157090 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-01T08:11:29.324+05:30  INFO 157090 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-01T08:12:29.324+05:30  INFO 157090 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-01T08:13:29.325+05:30  INFO 157090 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-01T08:13:31.530+05:30  INFO 157090 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status DOWN (replication=false)
-2025-10-01T08:13:32.040+05:30  INFO 157090 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status DOWN (replication=true)
-2025-10-01T08:13:34.609+05:30  INFO 157090 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance LEAVE-SERVICE/192.168.1.72:leave-service:8085 with status DOWN (replication=false)
-2025-10-01T08:13:35.130+05:30  INFO 157090 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance LEAVE-SERVICE/192.168.1.72:leave-service:8085 with status DOWN (replication=true)
-2025-10-01T08:13:37.661+05:30  INFO 157090 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084 with status DOWN (replication=false)
-2025-10-01T08:13:38.182+05:30  INFO 157090 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084 with status DOWN (replication=true)
-2025-10-01T08:13:40.670+05:30  INFO 157090 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 with status DOWN (replication=false)
-2025-10-01T08:13:41.186+05:30  INFO 157090 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 with status DOWN (replication=true)
-2025-10-01T08:13:43.684+05:30  INFO 157090 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 with status DOWN (replication=false)
-2025-10-01T08:13:44.208+05:30  INFO 157090 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 with status DOWN (replication=true)
-2025-10-01T08:13:46.697+05:30  INFO 157090 --- [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UNKNOWN with eureka with status DOWN
-2025-10-01T08:13:46.760+05:30  INFO 157090 --- [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
-2025-10-01T08:13:46.782+05:30  INFO 157090 --- [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
-2025-10-01T08:13:46.827+05:30  INFO 157090 --- [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
-2025-10-01T08:13:46.827+05:30  INFO 157090 --- [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
-2025-10-01T08:13:46.830+05:30  INFO 157090 --- [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
-2025-10-01T08:13:46.845+05:30  INFO 157090 --- [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
-2025-10-01T08:13:46.862+05:30  INFO 157090 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-10-01T08:13:46.865+05:30  INFO 157090 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-10-01T08:33:03.275+05:30  INFO 171534 --- [           main] c.p.p.d.DiscoveryServiceApplication      : Starting DiscoveryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 171534 (/home/harmn/Pictures/apc/discovery-service/target/discovery-service-0.0.1-SNAPSHOT.jar started by harmn in /home/harmn/Pictures/apc/discovery-service)
+2025-10-01T08:33:03.278+05:30  INFO 171534 --- [           main] c.p.p.d.DiscoveryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T08:33:04.953+05:30  INFO 171534 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6c38099d-7859-3f6b-b85e-0869d752b195
+2025-10-01T08:33:05.441+05:30  INFO 171534 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+2025-10-01T08:33:05.459+05:30  INFO 171534 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T08:33:05.460+05:30  INFO 171534 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-10-01T08:33:05.568+05:30  INFO 171534 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T08:33:05.570+05:30  INFO 171534 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2203 ms
+2025-10-01T08:33:06.993+05:30  INFO 171534 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-10-01T08:33:06.995+05:30  INFO 171534 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-10-01T08:33:07.254+05:30  INFO 171534 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-10-01T08:33:07.254+05:30  INFO 171534 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-10-01T08:33:08.786+05:30  WARN 171534 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-10-01T08:33:08.814+05:30  INFO 171534 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-10-01T08:33:08.853+05:30  INFO 171534 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-10-01T08:33:08.853+05:30  INFO 171534 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-10-01T08:33:08.871+05:30  INFO 171534 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759287788870 with initial instances count: 0
+2025-10-01T08:33:08.932+05:30  INFO 171534 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-10-01T08:33:08.935+05:30  INFO 171534 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2025-10-01T08:33:09.102+05:30  INFO 171534 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-10-01T08:33:09.102+05:30  INFO 171534 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-10-01T08:33:09.102+05:30  INFO 171534 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-10-01T08:33:09.102+05:30  INFO 171534 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-10-01T08:33:09.230+05:30  INFO 171534 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2025-10-01T08:33:09.240+05:30  INFO 171534 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-10-01T08:33:09.242+05:30  INFO 171534 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-10-01T08:33:09.256+05:30  INFO 171534 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-10-01T08:33:09.315+05:30  INFO 171534 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2025-10-01T08:33:09.330+05:30  WARN 171534 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-10-01T08:33:09.331+05:30  INFO 171534 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-10-01T08:33:09.338+05:30  INFO 171534 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-10-01T08:33:09.339+05:30  INFO 171534 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-10-01T08:33:09.340+05:30  INFO 171534 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-10-01T08:33:09.340+05:30  INFO 171534 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-10-01T08:33:09.341+05:30  INFO 171534 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-10-01T08:33:09.357+05:30  INFO 171534 --- [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-10-01T08:33:09.358+05:30  INFO 171534 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-10-01T08:33:09.346+05:30 ERROR 171534 --- [t-Conn-Cleaner2] c.n.d.s.t.j.EurekaJersey3ClientImpl      : Cannot clean connections
+
+java.lang.IllegalStateException: Client instance has been closed.
+	at org.glassfish.jersey.internal.guava.Preconditions.checkState(Preconditions.java:169) ~[jersey-common-3.1.3.jar!/:na]
+	at org.glassfish.jersey.client.JerseyClient.checkNotClosed(JerseyClient.java:257) ~[jersey-client-3.1.3.jar!/:na]
+	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:372) ~[jersey-client-3.1.3.jar!/:na]
+	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:56) ~[jersey-client-3.1.3.jar!/:na]
+	at com.netflix.discovery.shared.transport.jersey3.EurekaJersey3ClientImpl$ConnectionCleanerTask.run(EurekaJersey3ClientImpl.java:347) ~[eureka-client-jersey3-2.0.1.jar!/:2.0.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-10-01T08:33:09.368+05:30  INFO 171534 --- [           main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-10-01T08:33:09.369+05:30  INFO 171534 --- [           main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-10-01T08:33:09.374+05:30  INFO 171534 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-01T08:33:09.414+05:30  INFO 171534 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-01T08:33:09.458+05:30 ERROR 171534 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8761 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8761 or configure this application to listen on another port.
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               2025-10-01T08:33:28.249+05:30  INFO 166035 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 with status UP (replication=false)
+2025-10-01T08:33:28.273+05:30  INFO 166035 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 (replication=false)
+2025-10-01T08:33:28.768+05:30  INFO 166035 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 with status UP (replication=true)
+2025-10-01T08:33:28.768+05:30  INFO 166035 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 (replication=true)
+2025-10-01T08:33:34.699+05:30  INFO 166035 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 with status UP (replication=false)
+2025-10-01T08:33:35.207+05:30  INFO 166035 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 with status UP (replication=true)
+2025-10-01T08:33:39.930+05:30  INFO 166035 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=false)
+2025-10-01T08:33:40.154+05:30  INFO 166035 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=true)
+2025-10-01T08:33:42.831+05:30  WARN 166035 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: EMPLOYEE-SERVICE - 192.168.1.72:employee-service:8081
+2025-10-01T08:33:42.831+05:30  WARN 166035 --- [nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Renew): EMPLOYEE-SERVICE - 192.168.1.72:employee-service:8081
+2025-10-01T08:33:42.864+05:30  INFO 166035 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 with status UP (replication=false)
+2025-10-01T08:33:43.380+05:30  INFO 166035 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 with status UP (replication=true)
+2025-10-01T08:33:44.216+05:30  INFO 166035 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084 with status UP (replication=false)
+2025-10-01T08:33:44.737+05:30  INFO 166035 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084 with status UP (replication=true)
+2025-10-01T08:33:46.791+05:30  INFO 166035 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance LEAVE-SERVICE/192.168.1.72:leave-service:8085 with status UP (replication=false)
+2025-10-01T08:33:47.305+05:30  INFO 166035 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance LEAVE-SERVICE/192.168.1.72:leave-service:8085 with status UP (replication=true)
+2025-10-01T08:33:56.689+05:30  INFO 166035 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:34:02.994+05:30  INFO 166035 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status UP (replication=false)
+2025-10-01T08:34:03.511+05:30  INFO 166035 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status UP (replication=true)
+2025-10-01T08:34:08.348+05:30  INFO 166035 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/192.168.1.72:api-gateway:8080 (replication=false)
+2025-10-01T08:34:08.866+05:30  WARN 166035 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: API-GATEWAY/192.168.1.72:api-gateway:8080
+2025-10-01T08:34:08.867+05:30  INFO 166035 --- [nio-8761-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): API-GATEWAY - 192.168.1.72:api-gateway:8080
+2025-10-01T08:34:08.871+05:30  WARN 166035 --- [get_localhost-8] c.n.eureka.cluster.ReplicationTask       : The replication of task API-GATEWAY/192.168.1.72:api-gateway:8080:Cancel@localhost failed with response code 404
+2025-10-01T08:34:08.872+05:30  WARN 166035 --- [get_localhost-8] c.netflix.eureka.cluster.PeerEurekaNode  : API-GATEWAY/192.168.1.72:api-gateway:8080:Cancel@localhost: missing entry.
+2025-10-01T08:34:09.647+05:30  WARN 166035 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: API-GATEWAY - 192.168.1.72:api-gateway:8080
+2025-10-01T08:34:09.648+05:30  WARN 166035 --- [nio-8761-exec-5] c.n.eureka.resources.InstanceResource    : Not Found (Renew): API-GATEWAY - 192.168.1.72:api-gateway:8080
+2025-10-01T08:34:09.696+05:30  INFO 166035 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status UP (replication=false)
+2025-10-01T08:34:10.206+05:30  INFO 166035 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status UP (replication=true)
+2025-10-01T08:34:56.688+05:30  INFO 166035 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:35:56.688+05:30  INFO 166035 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:36:56.688+05:30  INFO 166035 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:37:04.901+05:30  INFO 166035 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status DOWN (replication=false)
+2025-10-01T08:37:05.235+05:30  INFO 166035 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status DOWN (replication=true)
+2025-10-01T08:37:10.171+05:30  INFO 166035 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/192.168.1.72:api-gateway:8080 (replication=false)
+2025-10-01T08:37:10.295+05:30  WARN 166035 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: API-GATEWAY - 192.168.1.72:api-gateway:8080
+2025-10-01T08:37:10.296+05:30  WARN 166035 --- [nio-8761-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Renew): API-GATEWAY - 192.168.1.72:api-gateway:8080
+2025-10-01T08:37:10.297+05:30  WARN 166035 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: API-GATEWAY/192.168.1.72:api-gateway:8080
+2025-10-01T08:37:10.297+05:30  INFO 166035 --- [nio-8761-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): API-GATEWAY - 192.168.1.72:api-gateway:8080
+2025-10-01T08:37:10.299+05:30  WARN 166035 --- [get_localhost-4] c.n.eureka.cluster.ReplicationTask       : The replication of task API-GATEWAY/192.168.1.72:api-gateway:8080:Heartbeat@localhost failed with response code 404
+2025-10-01T08:37:10.299+05:30  WARN 166035 --- [get_localhost-4] c.netflix.eureka.cluster.PeerEurekaNode  : API-GATEWAY/192.168.1.72:api-gateway:8080:Heartbeat@localhost: missing entry.
+2025-10-01T08:37:10.300+05:30  WARN 166035 --- [get_localhost-4] c.netflix.eureka.cluster.PeerEurekaNode  : API-GATEWAY/192.168.1.72:api-gateway:8080:Heartbeat@localhost: cannot find instance id 192.168.1.72:api-gateway:8080 and hence replicating the instance with status DOWN
+2025-10-01T08:37:10.300+05:30  WARN 166035 --- [get_localhost-4] c.n.eureka.cluster.ReplicationTask       : The replication of task API-GATEWAY/192.168.1.72:api-gateway:8080:Cancel@localhost failed with response code 404
+2025-10-01T08:37:10.300+05:30  WARN 166035 --- [get_localhost-4] c.netflix.eureka.cluster.PeerEurekaNode  : API-GATEWAY/192.168.1.72:api-gateway:8080:Cancel@localhost: missing entry.
+2025-10-01T08:37:10.821+05:30  INFO 166035 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status DOWN (replication=true)
+2025-10-01T08:37:14.126+05:30  INFO 166035 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status UP (replication=false)
+2025-10-01T08:37:14.650+05:30  INFO 166035 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status UP (replication=true)
+2025-10-01T08:37:56.562+05:30  INFO 166035 --- [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 11
+2025-10-01T08:37:56.688+05:30  INFO 166035 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:38:56.688+05:30  INFO 166035 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:39:56.688+05:30  INFO 166035 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:40:56.688+05:30  INFO 166035 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
