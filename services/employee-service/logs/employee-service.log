@@ -1,0 +1,81 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2025-10-01T08:07:38.252+05:30  INFO 157312 --- [           main] c.p.p.e.EmployeeServiceApplication       : Starting EmployeeServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 157312 (/home/harmn/Pictures/apc/services/employee-service/target/employee-service-0.0.1-SNAPSHOT.jar started by harmn in /home/harmn/Pictures/apc/services/employee-service)
+2025-10-01T08:07:38.255+05:30  INFO 157312 --- [           main] c.p.p.e.EmployeeServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T08:07:39.638+05:30  INFO 157312 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-01T08:07:39.952+05:30  INFO 157312 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 299 ms. Found 1 JPA repository interfaces.
+2025-10-01T08:07:40.398+05:30  INFO 157312 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6c47527b-56d4-304b-bbf9-dee02da8616f
+2025-10-01T08:07:40.982+05:30  INFO 157312 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2025-10-01T08:07:41.000+05:30  INFO 157312 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T08:07:41.001+05:30  INFO 157312 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-10-01T08:07:41.123+05:30  INFO 157312 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T08:07:41.124+05:30  INFO 157312 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2776 ms
+2025-10-01T08:07:41.344+05:30  INFO 157312 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-01T08:07:41.419+05:30  INFO 157312 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2025-10-01T08:07:41.429+05:30  INFO 157312 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-10-01T08:07:41.806+05:30  INFO 157312 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-01T08:07:41.855+05:30  INFO 157312 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T08:07:42.084+05:30  INFO 157312 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@42561fba
+2025-10-01T08:07:42.088+05:30  INFO 157312 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T08:07:43.401+05:30  INFO 157312 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-01T08:07:43.465+05:30  INFO 157312 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T08:07:44.073+05:30  WARN 157312 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-01T08:07:45.093+05:30  INFO 157312 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-10-01T08:07:45.304+05:30  INFO 157312 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-10-01T08:07:45.494+05:30  INFO 157312 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-10-01T08:07:45.504+05:30  INFO 157312 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-10-01T08:07:45.561+05:30  INFO 157312 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-10-01T08:07:45.562+05:30  INFO 157312 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-10-01T08:07:45.562+05:30  INFO 157312 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-10-01T08:07:45.562+05:30  INFO 157312 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-10-01T08:07:45.562+05:30  INFO 157312 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-10-01T08:07:45.562+05:30  INFO 157312 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-10-01T08:07:45.562+05:30  INFO 157312 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-10-01T08:07:46.508+05:30  INFO 157312 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-10-01T08:07:46.513+05:30  INFO 157312 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-10-01T08:07:46.519+05:30  INFO 157312 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-10-01T08:07:46.527+05:30  INFO 157312 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759286266526 with initial instances count: 0
+2025-10-01T08:07:46.532+05:30  INFO 157312 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EMPLOYEE-SERVICE with eureka with status UP
+2025-10-01T08:07:46.534+05:30  INFO 157312 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759286266534, current=UP, previous=STARTING]
+2025-10-01T08:07:46.538+05:30  INFO 157312 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081: registering service...
+2025-10-01T08:07:46.571+05:30  INFO 157312 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2025-10-01T08:07:46.572+05:30  INFO 157312 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2025-10-01T08:07:46.587+05:30  INFO 157312 --- [           main] c.p.p.e.EmployeeServiceApplication       : Started EmployeeServiceApplication in 9.077 seconds (process running for 9.971)
+2025-10-01T08:07:46.950+05:30  INFO 157312 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 - registration status: 204
+2025-10-01T08:08:16.514+05:30  INFO 157312 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-10-01T08:08:16.522+05:30  INFO 157312 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-10-01T08:08:16.522+05:30  INFO 157312 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-10-01T08:08:16.522+05:30  INFO 157312 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-10-01T08:08:16.523+05:30  INFO 157312 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-10-01T08:08:16.523+05:30  INFO 157312 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-10-01T08:08:16.523+05:30  INFO 157312 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-10-01T08:08:16.551+05:30  INFO 157312 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-10-01T08:08:30.940+05:30  INFO 157312 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-01T08:08:30.942+05:30  INFO 157312 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-01T08:08:30.972+05:30  INFO 157312 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+Hibernate: select e1_0.employee_id,e1_0.department_id,e1_0.employee_email,e1_0.employee_join_date,e1_0.employee_name,e1_0.position_id from employees e1_0
+Hibernate: select e1_0.employee_id,e1_0.department_id,e1_0.employee_email,e1_0.employee_join_date,e1_0.employee_name,e1_0.position_id from employees e1_0
+Hibernate: select e1_0.employee_id,e1_0.department_id,e1_0.employee_email,e1_0.employee_join_date,e1_0.employee_name,e1_0.position_id from employees e1_0 where e1_0.employee_id=?
+Hibernate: select e1_0.employee_id,e1_0.department_id,e1_0.employee_email,e1_0.employee_join_date,e1_0.employee_name,e1_0.position_id from employees e1_0
+Hibernate: select e1_0.employee_id,e1_0.department_id,e1_0.employee_email,e1_0.employee_join_date,e1_0.employee_name,e1_0.position_id from employees e1_0
+Hibernate: select e1_0.employee_id,e1_0.department_id,e1_0.employee_email,e1_0.employee_join_date,e1_0.employee_name,e1_0.position_id from employees e1_0
+Hibernate: select e1_0.employee_id,e1_0.department_id,e1_0.employee_email,e1_0.employee_join_date,e1_0.employee_name,e1_0.position_id from employees e1_0
+Hibernate: select e1_0.employee_id,e1_0.department_id,e1_0.employee_email,e1_0.employee_join_date,e1_0.employee_name,e1_0.position_id from employees e1_0
+Hibernate: select e1_0.employee_id,e1_0.department_id,e1_0.employee_email,e1_0.employee_join_date,e1_0.employee_name,e1_0.position_id from employees e1_0
+Hibernate: select e1_0.employee_id,e1_0.department_id,e1_0.employee_email,e1_0.employee_join_date,e1_0.employee_name,e1_0.position_id from employees e1_0
+2025-10-01T08:12:45.571+05:30  INFO 157312 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-10-01T08:13:43.670+05:30  INFO 157312 --- [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EMPLOYEE-SERVICE with eureka with status DOWN
+2025-10-01T08:13:43.671+05:30  INFO 157312 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759286623671, current=DOWN, previous=UP]
+2025-10-01T08:13:43.672+05:30  INFO 157312 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081: registering service...
+2025-10-01T08:13:43.687+05:30  INFO 157312 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 - registration status: 204
+2025-10-01T08:13:43.720+05:30  INFO 157312 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T08:13:43.742+05:30  INFO 157312 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T08:13:43.757+05:30  INFO 157312 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T08:13:43.759+05:30  INFO 157312 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...

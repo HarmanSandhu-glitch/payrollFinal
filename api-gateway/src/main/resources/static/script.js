@@ -300,16 +300,26 @@ function loadPositionsDropdown() {
 
 function loadEmployeesDropdown(selectId) {
     fetch('/api/employees')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch employees');
+            }
+            return response.json();
+        })
         .then(data => {
             const select = document.getElementById(selectId);
-            select.innerHTML = '';
+            select.innerHTML = '<option value="">Select an employee...</option>';
             data.forEach(employee => {
                 const option = document.createElement('option');
                 option.value = employee.employeeId;
                 option.text = employee.employeeName;
                 select.appendChild(option);
             });
+        })
+        .catch(error => {
+            console.error('Error loading employees:', error);
+            const select = document.getElementById(selectId);
+            select.innerHTML = '<option value="">Error loading employees</option>';
         });
 }
 

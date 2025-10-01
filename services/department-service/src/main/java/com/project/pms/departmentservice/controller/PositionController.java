@@ -2,8 +2,8 @@ package com.project.pms.departmentservice.controller;
 
 import com.project.pms.departmentservice.entity.Position;
 import com.project.pms.departmentservice.service.PositionService;
+import jakarta.validation.Valid;
 import java.util.List;
-import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

@@ -1,0 +1,96 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2025-10-01T08:07:23.360+05:30  INFO 157090 --- [           main] c.p.p.d.DiscoveryServiceApplication      : Starting DiscoveryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 157090 (/home/harmn/Pictures/apc/discovery-service/target/discovery-service-0.0.1-SNAPSHOT.jar started by harmn in /home/harmn/Pictures/apc/discovery-service)
+2025-10-01T08:07:23.367+05:30  INFO 157090 --- [           main] c.p.p.d.DiscoveryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T08:07:25.348+05:30  INFO 157090 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6c38099d-7859-3f6b-b85e-0869d752b195
+2025-10-01T08:07:25.777+05:30  INFO 157090 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+2025-10-01T08:07:25.790+05:30  INFO 157090 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T08:07:25.790+05:30  INFO 157090 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-10-01T08:07:25.890+05:30  INFO 157090 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T08:07:25.892+05:30  INFO 157090 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2371 ms
+2025-10-01T08:07:27.334+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-10-01T08:07:27.336+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-10-01T08:07:27.589+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-10-01T08:07:27.589+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-10-01T08:07:28.747+05:30  WARN 157090 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-10-01T08:07:28.778+05:30  INFO 157090 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-10-01T08:07:28.817+05:30  INFO 157090 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-10-01T08:07:28.818+05:30  INFO 157090 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-10-01T08:07:28.831+05:30  INFO 157090 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759286248830 with initial instances count: 0
+2025-10-01T08:07:28.887+05:30  INFO 157090 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-10-01T08:07:28.890+05:30  INFO 157090 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2025-10-01T08:07:29.078+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-10-01T08:07:29.078+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-10-01T08:07:29.078+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-10-01T08:07:29.078+05:30  INFO 157090 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-10-01T08:07:29.198+05:30  INFO 157090 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2025-10-01T08:07:29.209+05:30  INFO 157090 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-10-01T08:07:29.211+05:30  INFO 157090 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-10-01T08:07:29.225+05:30  INFO 157090 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-10-01T08:07:29.282+05:30  INFO 157090 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2025-10-01T08:07:29.319+05:30  INFO 157090 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-10-01T08:07:29.320+05:30  INFO 157090 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-10-01T08:07:29.321+05:30  INFO 157090 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-10-01T08:07:29.321+05:30  INFO 157090 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-10-01T08:07:29.321+05:30  INFO 157090 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-10-01T08:07:29.325+05:30  INFO 157090 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+2025-10-01T08:07:29.326+05:30  INFO 157090 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-10-01T08:07:29.335+05:30  INFO 157090 --- [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-10-01T08:07:29.356+05:30  INFO 157090 --- [           main] c.p.p.d.DiscoveryServiceApplication      : Started DiscoveryServiceApplication in 6.831 seconds (process running for 7.754)
+2025-10-01T08:07:46.235+05:30  INFO 157090 --- [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-01T08:07:46.236+05:30  INFO 157090 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-01T08:07:46.239+05:30  INFO 157090 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-01T08:07:46.875+05:30  WARN 157090 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: PAYROLL-SERVICE - 192.168.1.72:payroll-service:8083
+2025-10-01T08:07:46.876+05:30  WARN 157090 --- [nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Renew): PAYROLL-SERVICE - 192.168.1.72:payroll-service:8083
+2025-10-01T08:07:46.940+05:30  INFO 157090 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 with status UP (replication=false)
+2025-10-01T08:07:47.075+05:30  INFO 157090 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=false)
+2025-10-01T08:07:47.825+05:30  INFO 157090 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 with status UP (replication=true)
+2025-10-01T08:07:47.827+05:30  INFO 157090 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=true)
+2025-10-01T08:07:54.782+05:30  INFO 157090 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 with status UP (replication=false)
+2025-10-01T08:07:55.298+05:30  INFO 157090 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 with status UP (replication=true)
+2025-10-01T08:08:00.328+05:30  INFO 157090 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=false)
+2025-10-01T08:08:00.350+05:30  INFO 157090 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 (replication=false)
+2025-10-01T08:08:00.855+05:30  INFO 157090 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=true)
+2025-10-01T08:08:00.858+05:30  INFO 157090 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 (replication=true)
+2025-10-01T08:08:05.556+05:30  INFO 157090 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084 with status UP (replication=false)
+2025-10-01T08:08:06.071+05:30  INFO 157090 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084 with status UP (replication=true)
+2025-10-01T08:08:07.537+05:30  INFO 157090 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance LEAVE-SERVICE/192.168.1.72:leave-service:8085 with status UP (replication=false)
+2025-10-01T08:08:08.053+05:30  INFO 157090 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance LEAVE-SERVICE/192.168.1.72:leave-service:8085 with status UP (replication=true)
+2025-10-01T08:08:17.092+05:30  WARN 157090 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: PAYROLL-SERVICE - 192.168.1.72:payroll-service:8083
+2025-10-01T08:08:17.092+05:30  WARN 157090 --- [nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Renew): PAYROLL-SERVICE - 192.168.1.72:payroll-service:8083
+2025-10-01T08:08:17.120+05:30  INFO 157090 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=false)
+2025-10-01T08:08:17.637+05:30  INFO 157090 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PAYROLL-SERVICE/192.168.1.72:payroll-service:8083 with status UP (replication=true)
+2025-10-01T08:08:23.109+05:30  INFO 157090 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status UP (replication=false)
+2025-10-01T08:08:23.624+05:30  INFO 157090 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status UP (replication=true)
+2025-10-01T08:08:29.323+05:30  INFO 157090 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:09:29.323+05:30  INFO 157090 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:10:29.323+05:30  INFO 157090 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:11:29.324+05:30  INFO 157090 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:12:29.324+05:30  INFO 157090 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:13:29.325+05:30  INFO 157090 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-01T08:13:31.530+05:30  INFO 157090 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status DOWN (replication=false)
+2025-10-01T08:13:32.040+05:30  INFO 157090 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.72:api-gateway:8080 with status DOWN (replication=true)
+2025-10-01T08:13:34.609+05:30  INFO 157090 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance LEAVE-SERVICE/192.168.1.72:leave-service:8085 with status DOWN (replication=false)
+2025-10-01T08:13:35.130+05:30  INFO 157090 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance LEAVE-SERVICE/192.168.1.72:leave-service:8085 with status DOWN (replication=true)
+2025-10-01T08:13:37.661+05:30  INFO 157090 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084 with status DOWN (replication=false)
+2025-10-01T08:13:38.182+05:30  INFO 157090 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084 with status DOWN (replication=true)
+2025-10-01T08:13:40.670+05:30  INFO 157090 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 with status DOWN (replication=false)
+2025-10-01T08:13:41.186+05:30  INFO 157090 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 with status DOWN (replication=true)
+2025-10-01T08:13:43.684+05:30  INFO 157090 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 with status DOWN (replication=false)
+2025-10-01T08:13:44.208+05:30  INFO 157090 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EMPLOYEE-SERVICE/192.168.1.72:employee-service:8081 with status DOWN (replication=true)
+2025-10-01T08:13:46.697+05:30  INFO 157090 --- [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UNKNOWN with eureka with status DOWN
+2025-10-01T08:13:46.760+05:30  INFO 157090 --- [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+2025-10-01T08:13:46.782+05:30  INFO 157090 --- [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-10-01T08:13:46.827+05:30  INFO 157090 --- [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-10-01T08:13:46.827+05:30  INFO 157090 --- [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+2025-10-01T08:13:46.830+05:30  INFO 157090 --- [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-10-01T08:13:46.845+05:30  INFO 157090 --- [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-10-01T08:13:46.862+05:30  INFO 157090 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-10-01T08:13:46.865+05:30  INFO 157090 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

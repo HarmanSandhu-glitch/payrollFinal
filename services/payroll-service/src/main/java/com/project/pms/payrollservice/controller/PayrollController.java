@@ -20,12 +20,13 @@ public class PayrollController {
     @Autowired
     private PayrollService payrollService;
 
-    @PostMapping("/generate/{employeeId}")
-    public ResponseEntity<Payroll> generatePayroll(@PathVariable Long employeeId, @RequestBody(required = false) Map<String, Double> payload) {
+    @PostMapping(value = "/generate/{employeeId}")
+    public ResponseEntity<Payroll> generatePayroll(@PathVariable("employeeId") Long employeeId, @RequestBody(required = false) Map<String, Double> payload) {
         try {
             Payroll savedPayroll = payrollService.generatePayroll(employeeId, payload);
             return ResponseEntity.ok(savedPayroll);
         } catch (RuntimeException e) {
+            System.out.println("Error generating payroll: " + e.getMessage());
             return ResponseEntity.notFound().build();
         }
     }

@@ -40,19 +40,45 @@
 
     function checkIn() {
         const employeeId = document.getElementById('attendanceEmployeeId').value;
+        if (!employeeId || employeeId === '') {
+            alert('Please select an employee first!');
+            return;
+        }
         fetch(`/api/attendance/checkin/${employeeId}`, { method: 'POST' })
             .then(response => {
-                if(response.ok) alert('Checked-in successfully!');
-                else alert('Check-in failed!');
+                if(response.ok) {
+                    alert('Checked-in successfully!');
+                    return response.json();
+                } else {
+                    alert('Check-in failed!');
+                    console.error('Check-in failed:', response.status, response.statusText);
+                }
+            })
+            .catch(error => {
+                alert('Check-in error: ' + error.message);
+                console.error('Check-in error:', error);
             });
     }
 
     function checkOut() {
         const employeeId = document.getElementById('attendanceEmployeeId').value;
+        if (!employeeId || employeeId === '') {
+            alert('Please select an employee first!');
+            return;
+        }
         fetch(`/api/attendance/checkout/${employeeId}`, { method: 'POST' })
             .then(response => {
-                if(response.ok) alert('Checked-out successfully!');
-                else alert('Check-out failed!');
+                if(response.ok) {
+                    alert('Checked-out successfully!');
+                    return response.json();
+                } else {
+                    alert('Check-out failed!');
+                    console.error('Check-out failed:', response.status, response.statusText);
+                }
+            })
+            .catch(error => {
+                alert('Check-out error: ' + error.message);
+                console.error('Check-out error:', error);
             });
     }
 </script>

@@ -1,0 +1,58 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2025-10-01T08:08:18.415+05:30  INFO 158063 --- [           main] c.p.p.apigateway.ApiGatewayApplication   : Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 158063 (/home/harmn/Pictures/apc/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar started by harmn in /home/harmn/Pictures/apc/api-gateway)
+2025-10-01T08:08:18.421+05:30  INFO 158063 --- [           main] c.p.p.apigateway.ApiGatewayApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T08:08:20.442+05:30  INFO 158063 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=670d857a-0b83-39ba-bf66-3d6baa4667dc
+2025-10-01T08:08:20.571+05:30  INFO 158063 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-01T08:08:20.574+05:30  INFO 158063 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-01T08:08:20.575+05:30  INFO 158063 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-10-01T08:08:21.791+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2025-10-01T08:08:21.792+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2025-10-01T08:08:21.792+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2025-10-01T08:08:21.792+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2025-10-01T08:08:21.792+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2025-10-01T08:08:21.792+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2025-10-01T08:08:21.792+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2025-10-01T08:08:21.792+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2025-10-01T08:08:21.792+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2025-10-01T08:08:21.792+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2025-10-01T08:08:21.793+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2025-10-01T08:08:21.793+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-10-01T08:08:21.793+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2025-10-01T08:08:21.793+05:30  INFO 158063 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-10-01T08:08:22.123+05:30  INFO 158063 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-10-01T08:08:22.205+05:30  WARN 158063 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-10-01T08:08:22.239+05:30  INFO 158063 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-10-01T08:08:22.375+05:30  INFO 158063 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-10-01T08:08:22.384+05:30  INFO 158063 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-10-01T08:08:22.421+05:30  INFO 158063 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-10-01T08:08:22.421+05:30  INFO 158063 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-10-01T08:08:22.421+05:30  INFO 158063 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-10-01T08:08:22.421+05:30  INFO 158063 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-10-01T08:08:22.421+05:30  INFO 158063 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-10-01T08:08:22.421+05:30  INFO 158063 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-10-01T08:08:22.422+05:30  INFO 158063 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-10-01T08:08:23.015+05:30  INFO 158063 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-10-01T08:08:23.019+05:30  INFO 158063 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-10-01T08:08:23.023+05:30  INFO 158063 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-10-01T08:08:23.042+05:30  INFO 158063 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759286303042 with initial instances count: 3
+2025-10-01T08:08:23.045+05:30  INFO 158063 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+2025-10-01T08:08:23.046+05:30  INFO 158063 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759286303046, current=UP, previous=STARTING]
+2025-10-01T08:08:23.049+05:30  INFO 158063 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/192.168.1.72:api-gateway:8080: registering service...
+2025-10-01T08:08:23.111+05:30  INFO 158063 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/192.168.1.72:api-gateway:8080 - registration status: 204
+2025-10-01T08:08:23.278+05:30  INFO 158063 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+2025-10-01T08:08:23.280+05:30  INFO 158063 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2025-10-01T08:08:23.315+05:30  INFO 158063 --- [           main] c.p.p.apigateway.ApiGatewayApplication   : Started ApiGatewayApplication in 5.712 seconds (process running for 6.673)
+2025-10-01T08:13:22.425+05:30  INFO 158063 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-10-01T08:13:31.519+05:30  INFO 158063 --- [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application API-GATEWAY with eureka with status DOWN
+2025-10-01T08:13:31.520+05:30  INFO 158063 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759286611520, current=DOWN, previous=UP]
+2025-10-01T08:13:31.520+05:30  INFO 158063 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/192.168.1.72:api-gateway:8080: registering service...
+2025-10-01T08:13:31.533+05:30  INFO 158063 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/192.168.1.72:api-gateway:8080 - registration status: 204
+2025-10-01T08:13:33.580+05:30  INFO 158063 --- [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...

@@ -2,12 +2,11 @@ package com.project.pms.attendanceservice.service;
 
 import com.project.pms.attendanceservice.entity.Attendance;
 import com.project.pms.attendanceservice.repository.AttendanceRepository;
-import java.util.Optional;
 import java.time.LocalDate;
-import org.springframework.stereotype.Service;
-import org.springframework.beans.factory.annotation.Autowired;
 import java.time.LocalTime;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 
 @Service
