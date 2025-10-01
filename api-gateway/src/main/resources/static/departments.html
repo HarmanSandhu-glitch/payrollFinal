@@ -2,47 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Manage Departments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Management - APC Payroll System</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🏢</text></svg>">
 </head>
 <body>
 <header>
-    <h1>Payroll Management System</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="employees.html">Employees</a>
-        <a href="departments.html">Departments</a>
-        <a href="positions.html">Positions</a>
-        <a href="payroll.html">Payroll</a>
-        <a href="attendance.html">Attendance</a>
-        <a href="leaves.html">Leaves</a>
-    </nav>
+    <div class="app-bar">
+        <h1>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">business</span>
+            APC Payroll System
+        </h1>
+        <nav>
+            <a href="index.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">home</span>
+                Home
+            </a>
+            <a href="employees.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">people</span>
+                Employees
+            </a>
+            <a href="departments.html" class="nav-link" style="color: var(--md-sys-color-primary);">
+                <span class="material-icons" style="font-size: 16px;">corporate_fare</span>
+                Departments
+            </a>
+            <a href="positions.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">work</span>
+                Positions
+            </a>
+            <a href="payroll.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">payments</span>
+                Payroll
+            </a>
+            <a href="attendance.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">schedule</span>
+                Attendance
+            </a>
+            <a href="leaves.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">event_busy</span>
+                Leaves
+            </a>
+        </nav>
+    </div>
 </header>
 
 <main>
-    <h2>Manage Departments</h2>
-    <div class="button-container">
-        <button onclick="showAddDepartmentForm()">Add New Department</button>
+    <div class="md-card md-card-elevated">
+        <h2>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 12px;">corporate_fare</span>
+            Department Management
+        </h2>
+        <p style="text-align: center; color: var(--md-sys-color-on-surface-variant); margin-bottom: 2rem;">
+            Organize your company structure by managing departments and their hierarchies
+        </p>
     </div>
 
-    <div id="departmentForm">
-        <form onsubmit="submitDepartmentForm(event)">
-            <h3>Department Details</h3>
-            <input type="hidden" id="departmentId">
-            <label for="departmentName">Department Name</label>
-            <input type="text" id="departmentName" required>
-            <button type="submit">Save Department</button>
-            <button type="button" onclick="hideDepartmentForm()">Cancel</button>
-        </form>
+    <div class="button-container">
+        <button class="md-button md-button-filled" onclick="showAddDepartmentForm()">
+            <span class="material-icons" style="font-size: 18px;">add_business</span>
+            Add New Department
+        </button>
+    </div>
+
+    <div id="departmentForm" class="form-container">
+        <div class="form-header">
+            <h3 class="form-title">
+                <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">domain_add</span>
+                Department Details
+            </h3>
+        </div>
+        <div class="form-content">
+            <form onsubmit="submitDepartmentForm(event)">
+                <input type="hidden" id="departmentId">
+                
+                <div class="md-textfield">
+                    <input type="text" id="departmentName" required placeholder=" ">
+                    <label for="departmentName">Department Name</label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="md-button md-button-text" onclick="hideDepartmentForm()">
+                        <span class="material-icons" style="font-size: 18px;">close</span>
+                        Cancel
+                    </button>
+                    <button type="submit" class="md-button md-button-filled">
+                        <span class="material-icons" style="font-size: 18px;">save</span>
+                        Save Department
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <div class="table-container">
+        <div class="table-header">
+            <h3 class="table-title">
+                <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">list</span>
+                Department Directory
+            </h3>
+        </div>
         <table id="departmentsTable">
             <thead>
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Actions</th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">fingerprint</span>
+                    ID
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">business</span>
+                    Name
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">settings</span>
+                    Actions
+                </th>
             </tr>
             </thead>
             <tbody>

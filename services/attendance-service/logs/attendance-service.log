@@ -7,46 +7,47 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2025-10-01T08:33:34.538+05:30  INFO 172058 --- [           main] c.p.p.a.AttendanceServiceApplication     : Starting AttendanceServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 172058 (/home/harmn/Pictures/apc/services/attendance-service/target/attendance-service-0.0.1-SNAPSHOT.jar started by harmn in /home/harmn/Pictures/apc/services/attendance-service)
-2025-10-01T08:33:34.543+05:30  INFO 172058 --- [           main] c.p.p.a.AttendanceServiceApplication     : No active profile set, falling back to 1 default profile: "default"
-2025-10-01T08:33:35.756+05:30  INFO 172058 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-01T08:33:36.011+05:30  INFO 172058 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 243 ms. Found 1 JPA repository interfaces.
-2025-10-01T08:33:36.364+05:30  INFO 172058 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f87b98bd-9b68-3f21-8a32-977edbb1e291
-2025-10-01T08:33:37.471+05:30  INFO 172058 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-2025-10-01T08:33:37.503+05:30  INFO 172058 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-01T08:33:37.504+05:30  INFO 172058 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2025-10-01T08:33:37.702+05:30  INFO 172058 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-01T08:33:37.706+05:30  INFO 172058 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3019 ms
-2025-10-01T08:33:38.261+05:30  INFO 172058 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-01T08:33:38.387+05:30  INFO 172058 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
-2025-10-01T08:33:38.393+05:30  INFO 172058 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2025-10-01T08:33:39.184+05:30  INFO 172058 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-01T08:33:39.271+05:30  INFO 172058 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-01T08:33:39.581+05:30  INFO 172058 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@20921b9b
-2025-10-01T08:33:39.587+05:30  INFO 172058 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-01T08:33:40.931+05:30  INFO 172058 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-01T08:33:40.979+05:30  INFO 172058 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-01T08:33:41.467+05:30  WARN 172058 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-01T08:33:42.526+05:30  INFO 172058 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-10-01T08:33:42.755+05:30  INFO 172058 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-10-01T08:33:42.959+05:30  INFO 172058 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-10-01T08:33:42.970+05:30  INFO 172058 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-10-01T08:33:43.061+05:30  INFO 172058 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-10-01T08:33:43.062+05:30  INFO 172058 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-10-01T08:33:43.062+05:30  INFO 172058 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-10-01T08:33:43.062+05:30  INFO 172058 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-10-01T08:33:43.062+05:30  INFO 172058 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-10-01T08:33:43.062+05:30  INFO 172058 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-10-01T08:33:43.062+05:30  INFO 172058 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-10-01T08:33:44.099+05:30  INFO 172058 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-10-01T08:33:44.106+05:30  INFO 172058 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-10-01T08:33:44.112+05:30  INFO 172058 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-10-01T08:33:44.123+05:30  INFO 172058 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759287824121 with initial instances count: 5
-2025-10-01T08:33:44.127+05:30  INFO 172058 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ATTENDANCE-SERVICE with eureka with status UP
-2025-10-01T08:33:44.128+05:30  INFO 172058 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759287824128, current=UP, previous=STARTING]
-2025-10-01T08:33:44.133+05:30  INFO 172058 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084: registering service...
-2025-10-01T08:33:44.171+05:30  INFO 172058 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
-2025-10-01T08:33:44.172+05:30  INFO 172058 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8084
-2025-10-01T08:33:44.189+05:30  INFO 172058 --- [           main] c.p.p.a.AttendanceServiceApplication     : Started AttendanceServiceApplication in 11.164 seconds (process running for 12.752)
-2025-10-01T08:33:44.219+05:30  INFO 172058 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084 - registration status: 204
-2025-10-01T08:38:43.083+05:30  INFO 172058 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-10-01T08:50:06.585+05:30  INFO 179771 --- [           main] c.p.p.a.AttendanceServiceApplication     : Starting AttendanceServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 179771 (/home/harmn/Pictures/apc/services/attendance-service/target/attendance-service-0.0.1-SNAPSHOT.jar started by harmn in /home/harmn/Pictures/apc/services/attendance-service)
+2025-10-01T08:50:06.603+05:30  INFO 179771 --- [           main] c.p.p.a.AttendanceServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T08:50:09.735+05:30  INFO 179771 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-01T08:50:10.500+05:30  INFO 179771 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 725 ms. Found 1 JPA repository interfaces.
+2025-10-01T08:50:11.905+05:30  INFO 179771 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f87b98bd-9b68-3f21-8a32-977edbb1e291
+2025-10-01T08:50:13.779+05:30  INFO 179771 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2025-10-01T08:50:13.822+05:30  INFO 179771 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T08:50:13.823+05:30  INFO 179771 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-10-01T08:50:14.134+05:30  INFO 179771 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T08:50:14.140+05:30  INFO 179771 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7255 ms
+2025-10-01T08:50:14.890+05:30  INFO 179771 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-01T08:50:15.080+05:30  INFO 179771 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2025-10-01T08:50:15.088+05:30  INFO 179771 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-10-01T08:50:16.029+05:30  INFO 179771 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-01T08:50:16.170+05:30  INFO 179771 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T08:50:16.539+05:30  INFO 179771 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@55b5e331
+2025-10-01T08:50:16.545+05:30  INFO 179771 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T08:50:18.553+05:30  INFO 179771 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-01T08:50:18.642+05:30  INFO 179771 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T08:50:19.397+05:30  WARN 179771 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-01T08:50:20.363+05:30  INFO 179771 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-10-01T08:50:20.657+05:30  INFO 179771 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-10-01T08:50:20.890+05:30  INFO 179771 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-10-01T08:50:20.900+05:30  INFO 179771 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-10-01T08:50:20.956+05:30  INFO 179771 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-10-01T08:50:20.957+05:30  INFO 179771 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-10-01T08:50:20.957+05:30  INFO 179771 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-10-01T08:50:20.957+05:30  INFO 179771 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-10-01T08:50:20.957+05:30  INFO 179771 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-10-01T08:50:20.957+05:30  INFO 179771 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-10-01T08:50:20.957+05:30  INFO 179771 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-10-01T08:50:21.700+05:30  INFO 179771 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-10-01T08:50:21.706+05:30  INFO 179771 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-10-01T08:50:21.711+05:30  INFO 179771 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-10-01T08:50:21.720+05:30  INFO 179771 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759288821719 with initial instances count: 6
+2025-10-01T08:50:21.725+05:30  INFO 179771 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ATTENDANCE-SERVICE with eureka with status UP
+2025-10-01T08:50:21.725+05:30  INFO 179771 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759288821725, current=UP, previous=STARTING]
+2025-10-01T08:50:21.729+05:30  INFO 179771 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084: registering service...
+2025-10-01T08:50:21.758+05:30  INFO 179771 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2025-10-01T08:50:21.759+05:30  INFO 179771 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8084
+2025-10-01T08:50:21.773+05:30  INFO 179771 --- [           main] c.p.p.a.AttendanceServiceApplication     : Started AttendanceServiceApplication in 16.781 seconds (process running for 18.476)
+2025-10-01T08:50:21.795+05:30  INFO 179771 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ATTENDANCE-SERVICE/192.168.1.72:attendance-service:8084 - registration status: 204
+2025-10-01T08:55:20.979+05:30  INFO 179771 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-10-01T09:00:20.997+05:30  INFO 179771 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

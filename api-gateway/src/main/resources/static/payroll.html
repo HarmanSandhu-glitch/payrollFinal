@@ -2,56 +2,155 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Manage Payroll</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Management - APC Payroll System</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>💰</text></svg>">
 </head>
 <body>
 <header>
-    <h1>Payroll Management System</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="employees.html">Employees</a>
-        <a href="departments.html">Departments</a>
-        <a href="positions.html">Positions</a>
-        <a href="payroll.html">Payroll</a>
-        <a href="attendance.html">Attendance</a>
-        <a href="leaves.html">Leaves</a>
-    </nav>
+    <div class="app-bar">
+        <h1>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">business</span>
+            APC Payroll System
+        </h1>
+        <nav>
+            <a href="index.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">home</span>
+                Home
+            </a>
+            <a href="employees.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">people</span>
+                Employees
+            </a>
+            <a href="departments.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">corporate_fare</span>
+                Departments
+            </a>
+            <a href="positions.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">work</span>
+                Positions
+            </a>
+            <a href="payroll.html" class="nav-link" style="color: var(--md-sys-color-primary);">
+                <span class="material-icons" style="font-size: 16px;">payments</span>
+                Payroll
+            </a>
+            <a href="attendance.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">schedule</span>
+                Attendance
+            </a>
+            <a href="leaves.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">event_busy</span>
+                Leaves
+            </a>
+        </nav>
+    </div>
 </header>
 
 <main>
-    <h2>Manage Payroll</h2>
-
-    <div class="form-container">
-        <form onsubmit="generatePayroll(event)">
-            <h3>Generate Payroll</h3>
-            <label for="payrollEmployeeId">Select Employee</label>
-            <select id="payrollEmployeeId" required></select>
-            <label for="deductions">Deductions</label>
-            <input type="number" id="deductions" value="0">
-            <button type="submit">Generate</button>
-        </form>
+    <div class="md-card md-card-elevated">
+        <h2>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 12px;">payments</span>
+            Payroll Management
+        </h2>
+        <p style="text-align: center; color: var(--md-sys-color-on-surface-variant); margin-bottom: 2rem;">
+            Generate and manage employee compensation with automated calculations
+        </p>
     </div>
 
-    <div class="form-container">
-        <form onsubmit="viewPayroll(event)">
-            <h3>View Payroll</h3>
-            <label for="viewPayrollEmployeeId">Select Employee</label>
-            <select id="viewPayrollEmployeeId" required></select>
-            <button type="submit">View</button>
-        </form>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        <div class="form-container">
+            <div class="form-header">
+                <h3 class="form-title">
+                    <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">calculate</span>
+                    Generate Payroll
+                </h3>
+            </div>
+            <div class="form-content">
+                <form onsubmit="generatePayroll(event)">
+                    <div class="md-textfield">
+                        <select id="payrollEmployeeId" required>
+                            <option value="">Select an employee...</option>
+                        </select>
+                        <label for="payrollEmployeeId">Employee</label>
+                    </div>
+                    
+                    <div class="md-textfield">
+                        <input type="number" id="deductions" value="0" step="0.01" placeholder=" ">
+                        <label for="deductions">Deductions ($)</label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="md-button md-button-filled">
+                            <span class="material-icons" style="font-size: 18px;">receipt_long</span>
+                            Generate Payroll
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <div class="form-header">
+                <h3 class="form-title">
+                    <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">visibility</span>
+                    View Payroll History
+                </h3>
+            </div>
+            <div class="form-content">
+                <form onsubmit="viewPayroll(event)">
+                    <div class="md-textfield">
+                        <select id="viewPayrollEmployeeId" required>
+                            <option value="">Select an employee...</option>
+                        </select>
+                        <label for="viewPayrollEmployeeId">Employee</label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="md-button md-button-outlined">
+                            <span class="material-icons" style="font-size: 18px;">search</span>
+                            View History
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
     <div class="table-container">
+        <div class="table-header">
+            <h3 class="table-title">
+                <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">account_balance</span>
+                Payroll Records
+            </h3>
+        </div>
         <table id="payrollTable">
             <thead>
             <tr>
-                <th>Payroll ID</th>
-                <th>Pay Date</th>
-                <th>Base Salary</th>
-                <th>Experience Bonus</th>
-                <th>Deductions</th>
-                <th>Total Pay</th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">fingerprint</span>
+                    Payroll ID
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">event</span>
+                    Pay Date
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">attach_money</span>
+                    Base Salary
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">trending_up</span>
+                    Experience Bonus
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">remove_circle</span>
+                    Deductions
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">paid</span>
+                    Total Pay
+                </th>
             </tr>
             </thead>
             <tbody>

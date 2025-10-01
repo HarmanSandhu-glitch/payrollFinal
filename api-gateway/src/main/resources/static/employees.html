@@ -2,57 +2,153 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Manage Employees</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management - APC Payroll System</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>👥</text></svg>">
 </head>
 <body>
 <header>
-    <h1>Payroll Management System</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="employees.html">Employees</a>
-        <a href="departments.html">Departments</a>
-        <a href="positions.html">Positions</a>
-        <a href="payroll.html">Payroll</a>
-        <a href="attendance.html">Attendance</a>
-        <a href="leaves.html">Leaves</a>
-    </nav>
+    <div class="app-bar">
+        <h1>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">business</span>
+            APC Payroll System
+        </h1>
+        <nav>
+            <a href="index.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">home</span>
+                Home
+            </a>
+            <a href="employees.html" class="nav-link" style="color: var(--md-sys-color-primary);">
+                <span class="material-icons" style="font-size: 16px;">people</span>
+                Employees
+            </a>
+            <a href="departments.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">corporate_fare</span>
+                Departments
+            </a>
+            <a href="positions.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">work</span>
+                Positions
+            </a>
+            <a href="payroll.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">payments</span>
+                Payroll
+            </a>
+            <a href="attendance.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">schedule</span>
+                Attendance
+            </a>
+            <a href="leaves.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">event_busy</span>
+                Leaves
+            </a>
+        </nav>
+    </div>
 </header>
 
 <main>
-    <h2>Manage Employees</h2>
-    <div class="button-container">
-        <button onclick="showAddEmployeeForm()">Add New Employee</button>
+    <div class="md-card md-card-elevated">
+        <h2>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 12px;">people</span>
+            Employee Management
+        </h2>
+        <p style="text-align: center; color: var(--md-sys-color-on-surface-variant); margin-bottom: 2rem;">
+            Add, edit, and manage employee information and assignments
+        </p>
     </div>
 
-    <div id="employeeForm">
-        <form onsubmit="submitEmployeeForm(event)">
-            <h3>Employee Details</h3>
-            <input type="hidden" id="employeeId">
-            <label for="employeeName">Full Name</label>
-            <input type="text" id="employeeName" required>
-            <label for="employeeEmail">Email Address</label>
-            <input type="email" id="employeeEmail" required>
-            <label for="employeeJoinDate">Join Date</label>
-            <input type="date" id="employeeJoinDate" required>
-            <label for="employeeDepartment">Department</label>
-            <select id="employeeDepartment" required></select>
-            <label for="employeePosition">Position</label>
-            <select id="employeePosition" required></select>
-            <button type="submit">Save Employee</button>
-            <button type="button" onclick="hideEmployeeForm()">Cancel</button>
-        </form>
+    <div class="button-container">
+        <button class="md-button md-button-filled" onclick="showAddEmployeeForm()">
+            <span class="material-icons" style="font-size: 18px;">person_add</span>
+            Add New Employee
+        </button>
+    </div>
+
+    <div id="employeeForm" class="form-container">
+        <div class="form-header">
+            <h3 class="form-title">
+                <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">badge</span>
+                Employee Details
+            </h3>
+        </div>
+        <div class="form-content">
+            <form onsubmit="submitEmployeeForm(event)">
+                <input type="hidden" id="employeeId">
+                
+                <div class="md-textfield">
+                    <input type="text" id="employeeName" required placeholder=" ">
+                    <label for="employeeName">Full Name</label>
+                </div>
+                
+                <div class="md-textfield">
+                    <input type="email" id="employeeEmail" required placeholder=" ">
+                    <label for="employeeEmail">Email Address</label>
+                </div>
+                
+                <div class="md-textfield">
+                    <input type="date" id="employeeJoinDate" required>
+                    <label for="employeeJoinDate">Join Date</label>
+                </div>
+                
+                <div class="md-textfield">
+                    <select id="employeeDepartment" required>
+                        <option value="">Select department...</option>
+                    </select>
+                    <label for="employeeDepartment">Department</label>
+                </div>
+                
+                <div class="md-textfield">
+                    <select id="employeePosition" required>
+                        <option value="">Select position...</option>
+                    </select>
+                    <label for="employeePosition">Position</label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="md-button md-button-text" onclick="hideEmployeeForm()">
+                        <span class="material-icons" style="font-size: 18px;">close</span>
+                        Cancel
+                    </button>
+                    <button type="submit" class="md-button md-button-filled">
+                        <span class="material-icons" style="font-size: 18px;">save</span>
+                        Save Employee
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <div class="table-container">
+        <div class="table-header">
+            <h3 class="table-title">
+                <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">list</span>
+                Employee Directory
+            </h3>
+        </div>
         <table id="employeesTable">
             <thead>
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Join Date</th>
-                <th>Actions</th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">fingerprint</span>
+                    ID
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">person</span>
+                    Name
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">email</span>
+                    Email
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">event</span>
+                    Join Date
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">settings</span>
+                    Actions
+                </th>
             </tr>
             </thead>
             <tbody>

@@ -7,58 +7,91 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2025-10-01T08:33:23.928+05:30  INFO 171855 --- [           main] c.p.p.d.DepartmentServiceApplication     : Starting DepartmentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 171855 (/home/harmn/Pictures/apc/services/department-service/target/department-service-0.0.1-SNAPSHOT.jar started by harmn in /home/harmn/Pictures/apc/services/department-service)
-2025-10-01T08:33:23.934+05:30  INFO 171855 --- [           main] c.p.p.d.DepartmentServiceApplication     : No active profile set, falling back to 1 default profile: "default"
-2025-10-01T08:33:25.476+05:30  INFO 171855 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-01T08:33:25.802+05:30  INFO 171855 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 308 ms. Found 2 JPA repository interfaces.
-2025-10-01T08:33:26.403+05:30  INFO 171855 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=53319bf5-a76b-37dd-b5e8-ddde52eb0bdf
-2025-10-01T08:33:27.829+05:30  INFO 171855 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-2025-10-01T08:33:27.860+05:30  INFO 171855 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-01T08:33:27.861+05:30  INFO 171855 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2025-10-01T08:33:28.050+05:30  INFO 171855 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-01T08:33:28.053+05:30  INFO 171855 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3988 ms
-2025-10-01T08:33:28.517+05:30  INFO 171855 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-01T08:33:28.653+05:30  INFO 171855 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
-2025-10-01T08:33:28.656+05:30  INFO 171855 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2025-10-01T08:33:29.086+05:30  INFO 171855 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-01T08:33:29.142+05:30  INFO 171855 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-01T08:33:29.414+05:30  INFO 171855 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@150d80c4
-2025-10-01T08:33:29.420+05:30  INFO 171855 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-01T08:33:30.845+05:30  INFO 171855 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-01T08:33:30.907+05:30  INFO 171855 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-01T08:33:31.338+05:30  WARN 171855 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-01T08:33:32.409+05:30  INFO 171855 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-10-01T08:33:32.886+05:30  INFO 171855 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-10-01T08:33:33.188+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-10-01T08:33:33.214+05:30  INFO 171855 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-10-01T08:33:33.320+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-10-01T08:33:33.321+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-10-01T08:33:33.324+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-10-01T08:33:33.324+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-10-01T08:33:33.324+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-10-01T08:33:33.324+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-10-01T08:33:33.324+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-10-01T08:33:34.548+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-10-01T08:33:34.569+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-10-01T08:33:34.576+05:30  INFO 171855 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-10-01T08:33:34.588+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759287814586 with initial instances count: 5
-2025-10-01T08:33:34.594+05:30  INFO 171855 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DEPARTMENT-SERVICE with eureka with status UP
-2025-10-01T08:33:34.595+05:30  INFO 171855 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759287814595, current=UP, previous=STARTING]
-2025-10-01T08:33:34.601+05:30  INFO 171855 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DEPARTMENT-SERVICE/192.168.1.72:department-service:8082: registering service...
-2025-10-01T08:33:34.641+05:30  INFO 171855 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-2025-10-01T08:33:34.643+05:30  INFO 171855 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
-2025-10-01T08:33:34.666+05:30  INFO 171855 --- [           main] c.p.p.d.DepartmentServiceApplication     : Started DepartmentServiceApplication in 11.934 seconds (process running for 13.241)
-2025-10-01T08:33:34.702+05:30  INFO 171855 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 - registration status: 204
-2025-10-01T08:34:50.304+05:30  INFO 171855 --- [nio-8082-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-01T08:34:50.306+05:30  INFO 171855 --- [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-01T08:34:50.313+05:30  INFO 171855 --- [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-10-01T08:49:56.915+05:30  INFO 179547 --- [           main] c.p.p.d.DepartmentServiceApplication     : Starting DepartmentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 179547 (/home/harmn/Pictures/apc/services/department-service/target/department-service-0.0.1-SNAPSHOT.jar started by harmn in /home/harmn/Pictures/apc/services/department-service)
+2025-10-01T08:49:56.925+05:30  INFO 179547 --- [           main] c.p.p.d.DepartmentServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T08:49:59.381+05:30  INFO 179547 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-01T08:50:00.330+05:30  INFO 179547 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 911 ms. Found 2 JPA repository interfaces.
+2025-10-01T08:50:01.040+05:30  INFO 179547 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=53319bf5-a76b-37dd-b5e8-ddde52eb0bdf
+2025-10-01T08:50:02.323+05:30  INFO 179547 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2025-10-01T08:50:02.360+05:30  INFO 179547 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T08:50:02.361+05:30  INFO 179547 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-10-01T08:50:02.572+05:30  INFO 179547 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T08:50:02.574+05:30  INFO 179547 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5456 ms
+2025-10-01T08:50:02.990+05:30  INFO 179547 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-01T08:50:03.119+05:30  INFO 179547 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2025-10-01T08:50:03.126+05:30  INFO 179547 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-10-01T08:50:03.754+05:30  INFO 179547 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-01T08:50:03.855+05:30  INFO 179547 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T08:50:04.268+05:30  INFO 179547 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3003697
+2025-10-01T08:50:04.272+05:30  INFO 179547 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T08:50:07.225+05:30  INFO 179547 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-01T08:50:07.331+05:30  INFO 179547 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T08:50:08.231+05:30  WARN 179547 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-01T08:50:10.103+05:30  INFO 179547 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-10-01T08:50:10.733+05:30  INFO 179547 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-10-01T08:50:11.157+05:30  INFO 179547 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-10-01T08:50:11.195+05:30  INFO 179547 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-10-01T08:50:11.352+05:30  INFO 179547 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-10-01T08:50:11.353+05:30  INFO 179547 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-10-01T08:50:11.354+05:30  INFO 179547 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-10-01T08:50:11.354+05:30  INFO 179547 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-10-01T08:50:11.354+05:30  INFO 179547 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-10-01T08:50:11.354+05:30  INFO 179547 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-10-01T08:50:11.355+05:30  INFO 179547 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-10-01T08:50:13.061+05:30  INFO 179547 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-10-01T08:50:13.077+05:30  INFO 179547 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-10-01T08:50:13.097+05:30  INFO 179547 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-10-01T08:50:13.117+05:30  INFO 179547 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1759288813114 with initial instances count: 6
+2025-10-01T08:50:13.124+05:30  INFO 179547 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DEPARTMENT-SERVICE with eureka with status UP
+2025-10-01T08:50:13.126+05:30  INFO 179547 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1759288813126, current=UP, previous=STARTING]
+2025-10-01T08:50:13.142+05:30  INFO 179547 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DEPARTMENT-SERVICE/192.168.1.72:department-service:8082: registering service...
+2025-10-01T08:50:13.275+05:30  INFO 179547 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2025-10-01T08:50:13.286+05:30  INFO 179547 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2025-10-01T08:50:13.348+05:30  INFO 179547 --- [           main] c.p.p.d.DepartmentServiceApplication     : Started DepartmentServiceApplication in 18.062 seconds (process running for 20.069)
+2025-10-01T08:50:13.390+05:30  INFO 179547 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DEPARTMENT-SERVICE/192.168.1.72:department-service:8082 - registration status: 204
+2025-10-01T08:50:36.688+05:30  INFO 179547 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-01T08:50:36.689+05:30  INFO 179547 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-01T08:50:36.691+05:30  INFO 179547 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
 Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
 Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
 Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
 Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
 Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
 Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
-2025-10-01T08:38:33.351+05:30  INFO 171855 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
 Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
 Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
 Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
@@ -67,4 +100,63 @@ Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,
 Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
 Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
 Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+2025-10-01T08:55:11.391+05:30  INFO 179547 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+2025-10-01T09:00:11.402+05:30  INFO 179547 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?
+Hibernate: select p1_0.position_id,p1_0.department_id,p1_0.position_base_salary,p1_0.position_experience_bonus,p1_0.position_title from positions p1_0
+Hibernate: select d1_0.department_id,d1_0.department_name from departments d1_0
 Hibernate: select d1_0.department_id,d1_0.position_id,d1_0.position_base_salary,d1_0.position_experience_bonus,d1_0.position_title from positions d1_0 where d1_0.department_id=?

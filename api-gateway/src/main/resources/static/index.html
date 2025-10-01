@@ -2,33 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Manage Attendance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APC Payroll Management System</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>💼</text></svg>">
 </head>
 <body>
 <header>
-    <h1>Payroll Management System</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="employees.html">Employees</a>
-        <a href="departments.html">Departments</a>
-        <a href="positions.html">Positions</a>
-        <a href="payroll.html">Payroll</a>
-        <a href="attendance.html">Attendance</a>
-        <a href="leaves.html">Leaves</a>
-    </nav>
+    <div class="app-bar">
+        <h1>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">business</span>
+            APC Payroll System
+        </h1>
+        <nav>
+            <a href="index.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">home</span>
+                Home
+            </a>
+            <a href="employees.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">people</span>
+                Employees
+            </a>
+            <a href="departments.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">corporate_fare</span>
+                Departments
+            </a>
+            <a href="positions.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">work</span>
+                Positions
+            </a>
+            <a href="payroll.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">payments</span>
+                Payroll
+            </a>
+            <a href="attendance.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">schedule</span>
+                Attendance
+            </a>
+            <a href="leaves.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">event_busy</span>
+                Leaves
+            </a>
+        </nav>
+    </div>
 </header>
 
 <main>
-    <h2>Manage Attendance</h2>
+    <div class="md-card md-card-elevated">
+        <h2>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 12px;">schedule</span>
+            Attendance Management
+        </h2>
+        <p style="text-align: center; color: var(--md-sys-color-on-surface-variant); margin-bottom: 2rem;">
+            Manage employee attendance with easy check-in and check-out functionality
+        </p>
+    </div>
+
     <div class="form-container">
-        <form id="attendanceForm">
-            <h3>Mark Attendance</h3>
-            <label for="attendanceEmployeeId">Select Employee</label>
-            <select id="attendanceEmployeeId" required></select>
-            <button type="button" onclick="checkIn()">Check-In</button>
-            <button type="button" onclick="checkOut()">Check-Out</button>
-        </form>
+        <div class="form-header">
+            <h3 class="form-title">
+                <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">badge</span>
+                Mark Attendance
+            </h3>
+        </div>
+        <div class="form-content">
+            <form id="attendanceForm">
+                <div class="md-textfield">
+                    <select id="attendanceEmployeeId" required>
+                        <option value="">Select an employee...</option>
+                    </select>
+                    <label for="attendanceEmployeeId">Employee</label>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="md-button md-button-filled" onclick="checkIn()">
+                        <span class="material-icons" style="font-size: 18px;">login</span>
+                        Check-In
+                    </button>
+                    <button type="button" class="md-button md-button-outlined" onclick="checkOut()">
+                        <span class="material-icons" style="font-size: 18px;">logout</span>
+                        Check-Out
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </main>
 

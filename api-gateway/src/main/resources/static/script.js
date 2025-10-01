@@ -1,4 +1,205 @@
-// Employee Management
+/**
+ * APC Payroll Management System - Frontend JavaScript Module
+ * Modern Material Design Implementation with Modular Architecture
+ */
+
+// =============================================================================
+// UTILITY FUNCTIONS & HELPERS
+// =============================================================================
+
+/**
+ * Utility class for common operations
+ */
+class Utils {
+    /**
+     * Format date to locale string
+     * @param {string|Date} date - The date to format
+     * @returns {string} Formatted date string
+     */
+    static formatDate(date) {
+        return new Date(date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+        });
+    }
+
+    /**
+     * Show Material Design style notification
+     * @param {string} message - Message to display
+     * @param {string} type - Type of notification (success, error, info)
+     */
+    static showNotification(message, type = 'info') {
+        // Remove existing notifications
+        const existing = document.querySelector('.md-snackbar');
+        if (existing) existing.remove();
+
+        const snackbar = document.createElement('div');
+        snackbar.className = `md-snackbar md-snackbar-${type}`;
+        snackbar.innerHTML = `
+            <div class="md-snackbar-content">
+                <span class="material-icons">${type === 'error' ? 'error' : type === 'success' ? 'check_circle' : 'info'}</span>
+                <span>${message}</span>
+            </div>
+        `;
+        
+        document.body.appendChild(snackbar);
+        
+        // Auto remove after 4 seconds
+        setTimeout(() => {
+            if (snackbar.parentNode) {
+                snackbar.remove();
+            }
+        }, 4000);
+    }
+
+    /**
+     * Create Material Design button with icon
+     * @param {string} text - Button text
+     * @param {string} icon - Material icon name
+     * @param {string} variant - Button variant (filled, outlined, text)
+     * @param {Function} onclick - Click handler
+     * @returns {HTMLButtonElement} Button element
+     */
+    static createButton(text, icon, variant = 'filled', onclick = null) {
+        const button = document.createElement('button');
+        button.className = `md-button md-button-${variant}`;
+        button.innerHTML = `
+            <span class="material-icons" style="font-size: 18px;">${icon}</span>
+            ${text}
+        `;
+        if (onclick) button.onclick = onclick;
+        return button;
+    }
+
+    /**
+     * Enhanced fetch with error handling
+     * @param {string} url - Request URL
+     * @param {Object} options - Fetch options
+     * @returns {Promise} Fetch promise with error handling
+     */
+    static async apiRequest(url, options = {}) {
+        try {
+            const response = await fetch(url, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...options.headers
+                },
+                ...options
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+
+            return await response.json();
+        } catch (error) {
+            Utils.showNotification(`Request failed: ${error.message}`, 'error');
+            throw error;
+        }
+    }
+}
+
+// Add Material Design snackbar styles if not present
+if (!document.querySelector('#md-snackbar-styles')) {
+    const style = document.createElement('style');
+    style.id = 'md-snackbar-styles';
+    style.textContent = `
+        .md-snackbar {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--md-sys-color-surface-variant);
+            color: var(--md-sys-color-on-surface-variant);
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: var(--md-elevation-3);
+            z-index: 10000;
+            animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            max-width: 400px;
+        }
+        
+        .md-snackbar-success {
+            background-color: var(--md-sys-color-secondary);
+            color: var(--md-sys-color-on-secondary);
+        }
+        
+        .md-snackbar-error {
+            background-color: var(--md-sys-color-error);
+            color: var(--md-sys-color-on-primary);
+        }
+        
+        .md-snackbar-content {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateX(-50%) translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// =============================================================================
+// EMPLOYEE MANAGEMENT MODULE
+// =============================================================================
+
+/**
+ * Employee management functionality
+ */
+class EmployeeManager {
+    /**
+     * Load and display all employees
+     */
+    static async loadEmployees() {
+        try {
+            const employees = await Utils.apiRequest('/api/employees');
+            const tableBody = document.querySelector('#employeesTable tbody');
+            
+            if (!tableBody) return;
+            
+            tableBody.innerHTML = '';
+            employees.forEach(employee => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).textContent = employee.employeeId;
+                row.insertCell(1).textContent = employee.employeeName;
+                row.insertCell(2).textContent = employee.employeeEmail;
+                row.insertCell(3).textContent = Utils.formatDate(employee.employeeJoinDate);
+                
+                const actionsCell = row.insertCell(4);
+                actionsCell.style.display = 'flex';
+                actionsCell.style.gap = '8px';
+                
+                const editBtn = Utils.createButton('Edit', 'edit', 'text', 
+                    () => EmployeeManager.editEmployee(employee.employeeId));
+                const deleteBtn = Utils.createButton('Delete', 'delete', 'text', 
+                    () => EmployeeManager.deleteEmployee(employee.employeeId));
+                deleteBtn.classList.add('md-button-error');
+                
+                actionsCell.appendChild(editBtn);
+                actionsCell.appendChild(deleteBtn);
+            });
+            
+            Utils.showNotification(`Loaded ${employees.length} employees`, 'success');
+        } catch (error) {
+            console.error('Error loading employees:', error);
+        }
+    }
+}
+
+// Legacy function for backward compatibility
 function loadEmployees() {
     fetch('/api/employees')
         .then(response => response.json())

@@ -2,53 +2,139 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Manage Positions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Management - APC Payroll System</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>💼</text></svg>">
 </head>
 <body>
 <header>
-    <h1>Payroll Management System</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="employees.html">Employees</a>
-        <a href="departments.html">Departments</a>
-        <a href="positions.html">Positions</a>
-        <a href="payroll.html">Payroll</a>
-        <a href="attendance.html">Attendance</a>
-        <a href="leaves.html">Leaves</a>
-    </nav>
+    <div class="app-bar">
+        <h1>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">business</span>
+            APC Payroll System
+        </h1>
+        <nav>
+            <a href="index.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">home</span>
+                Home
+            </a>
+            <a href="employees.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">people</span>
+                Employees
+            </a>
+            <a href="departments.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">corporate_fare</span>
+                Departments
+            </a>
+            <a href="positions.html" class="nav-link" style="color: var(--md-sys-color-primary);">
+                <span class="material-icons" style="font-size: 16px;">work</span>
+                Positions
+            </a>
+            <a href="payroll.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">payments</span>
+                Payroll
+            </a>
+            <a href="attendance.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">schedule</span>
+                Attendance
+            </a>
+            <a href="leaves.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">event_busy</span>
+                Leaves
+            </a>
+        </nav>
+    </div>
 </header>
 
 <main>
-    <h2>Manage Positions</h2>
-    <div class="button-container">
-        <button onclick="showAddPositionForm()">Add New Position</button>
+    <div class="md-card md-card-elevated">
+        <h2>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 12px;">work</span>
+            Position Management
+        </h2>
+        <p style="text-align: center; color: var(--md-sys-color-on-surface-variant); margin-bottom: 2rem;">
+            Define job roles, responsibilities, and compensation structures for your organization
+        </p>
     </div>
 
-    <div id="positionForm">
-        <form onsubmit="submitPositionForm(event)">
-            <h3>Position Details</h3>
-            <input type="hidden" id="positionId">
-            <label for="positionTitle">Position Title</label>
-            <input type="text" id="positionTitle" required>
-            <label for="positionBaseSalary">Base Salary</label>
-            <input type="number" id="positionBaseSalary" required>
-            <label for="positionExperienceBonus">Experience Bonus</label>
-            <input type="number" id="positionExperienceBonus" required>
-            <button type="submit">Save Position</button>
-            <button type="button" onclick="hidePositionForm()">Cancel</button>
-        </form>
+    <div class="button-container">
+        <button class="md-button md-button-filled" onclick="showAddPositionForm()">
+            <span class="material-icons" style="font-size: 18px;">add_task</span>
+            Add New Position
+        </button>
+    </div>
+
+    <div id="positionForm" class="form-container">
+        <div class="form-header">
+            <h3 class="form-title">
+                <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">work_outline</span>
+                Position Details
+            </h3>
+        </div>
+        <div class="form-content">
+            <form onsubmit="submitPositionForm(event)">
+                <input type="hidden" id="positionId">
+                
+                <div class="md-textfield">
+                    <input type="text" id="positionTitle" required placeholder=" ">
+                    <label for="positionTitle">Position Title</label>
+                </div>
+                
+                <div class="md-textfield">
+                    <input type="number" id="positionBaseSalary" required placeholder=" " step="0.01">
+                    <label for="positionBaseSalary">Base Salary ($)</label>
+                </div>
+                
+                <div class="md-textfield">
+                    <input type="number" id="positionExperienceBonus" required placeholder=" " step="0.01">
+                    <label for="positionExperienceBonus">Experience Bonus ($)</label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="md-button md-button-text" onclick="hidePositionForm()">
+                        <span class="material-icons" style="font-size: 18px;">close</span>
+                        Cancel
+                    </button>
+                    <button type="submit" class="md-button md-button-filled">
+                        <span class="material-icons" style="font-size: 18px;">save</span>
+                        Save Position
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <div class="table-container">
+        <div class="table-header">
+            <h3 class="table-title">
+                <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">list</span>
+                Position Directory
+            </h3>
+        </div>
         <table id="positionsTable">
             <thead>
             <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Base Salary</th>
-                <th>Experience Bonus</th>
-                <th>Actions</th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">fingerprint</span>
+                    ID
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">badge</span>
+                    Title
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">attach_money</span>
+                    Base Salary
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">trending_up</span>
+                    Experience Bonus
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">settings</span>
+                    Actions
+                </th>
             </tr>
             </thead>
             <tbody>

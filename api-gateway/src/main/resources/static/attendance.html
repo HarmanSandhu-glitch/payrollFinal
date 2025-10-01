@@ -2,60 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Manage Attendance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management - APC Payroll System</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>⏰</text></svg>">
 </head>
 <body>
 <header>
-    <h1>Payroll Management System</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="employees.html">Employees</a>
-        <a href="departments.html">Departments</a>
-        <a href="positions.html">Positions</a>
-        <a href="payroll.html">Payroll</a>
-        <a href="attendance.html">Attendance</a>
-        <a href="leaves.html">Leaves</a>
-    </nav>
+    <div class="app-bar">
+        <h1>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">business</span>
+            APC Payroll System
+        </h1>
+        <nav>
+            <a href="index.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">home</span>
+                Home
+            </a>
+            <a href="employees.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">people</span>
+                Employees
+            </a>
+            <a href="departments.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">corporate_fare</span>
+                Departments
+            </a>
+            <a href="positions.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">work</span>
+                Positions
+            </a>
+            <a href="payroll.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">payments</span>
+                Payroll
+            </a>
+            <a href="attendance.html" class="nav-link" style="color: var(--md-sys-color-primary);">
+                <span class="material-icons" style="font-size: 16px;">schedule</span>
+                Attendance
+            </a>
+            <a href="leaves.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">event_busy</span>
+                Leaves
+            </a>
+        </nav>
+    </div>
 </header>
 
 <main>
-    <h2>Manage Attendance</h2>
+    <div class="md-card md-card-elevated">
+        <h2>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 12px;">schedule</span>
+            Attendance Management
+        </h2>
+        <p style="text-align: center; color: var(--md-sys-color-on-surface-variant); margin-bottom: 2rem;">
+            Track employee work hours with simple check-in and check-out functionality
+        </p>
+    </div>
+
     <div class="form-container">
-        <form id="attendanceForm">
-            <h3>Mark Attendance</h3>
-            <label for="attendanceEmployeeId">Select Employee</label>
-            <select id="attendanceEmployeeId" required></select>
-            <button type="button" onclick="checkIn()">Check-In</button>
-            <button type="button" onclick="checkOut()">Check-Out</button>
-        </form>
+        <div class="form-header">
+            <h3 class="form-title">
+                <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">access_time</span>
+                Mark Attendance
+            </h3>
+        </div>
+        <div class="form-content">
+            <form id="attendanceForm">
+                <div class="md-textfield">
+                    <select id="attendanceEmployeeId" required>
+                        <option value="">Select an employee...</option>
+                    </select>
+                    <label for="attendanceEmployeeId">Employee</label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="md-button md-button-filled" onclick="checkIn()">
+                        <span class="material-icons" style="font-size: 18px;">login</span>
+                        Check-In
+                    </button>
+                    <button type="button" class="md-button md-button-outlined" onclick="checkOut()">
+                        <span class="material-icons" style="font-size: 18px;">logout</span>
+                        Check-Out
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Real-time clock display -->
+    <div class="md-card" style="text-align: center; margin-bottom: 2rem;">
+        <h3 style="margin-bottom: 1rem; color: var(--md-sys-color-primary);">
+            <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">schedule</span>
+            Current Time
+        </h3>
+        <div id="currentTime" style="font-size: 2rem; font-weight: 500; font-family: 'Roboto Mono', monospace;">
+            --:--:-- --
+        </div>
+        <div id="currentDate" style="margin-top: 0.5rem; color: var(--md-sys-color-on-surface-variant);">
+            Loading...
+        </div>
     </div>
 </main>
 
 <script src="script.js"></script>
 <script>
+    // Real-time clock functionality
+    function updateClock() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', {
+            hour12: true,
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        });
+        const dateString = now.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        
+        document.getElementById('currentTime').textContent = timeString;
+        document.getElementById('currentDate').textContent = dateString;
+    }
+
     window.onload = function() {
         loadEmployeesDropdown('attendanceEmployeeId');
+        
+        // Start the clock
+        updateClock();
+        setInterval(updateClock, 1000);
     };
 
     function checkIn() {
         const employeeId = document.getElementById('attendanceEmployeeId').value;
         if (!employeeId || employeeId === '') {
-            alert('Please select an employee first!');
+            Utils.showNotification('Please select an employee first!', 'error');
             return;
         }
-        fetch(`/api/attendance/checkin/${employeeId}`, { method: 'POST' })
+        
+        Utils.apiRequest(`/api/attendance/checkin/${employeeId}`, { method: 'POST' })
             .then(response => {
-                if(response.ok) {
-                    alert('Checked-in successfully!');
-                    return response.json();
-                } else {
-                    alert('Check-in failed!');
-                    console.error('Check-in failed:', response.status, response.statusText);
-                }
+                Utils.showNotification('Employee checked-in successfully!', 'success');
+                // Reset selection
+                document.getElementById('attendanceEmployeeId').value = '';
             })
             .catch(error => {
-                alert('Check-in error: ' + error.message);
                 console.error('Check-in error:', error);
             });
     }
@@ -63,21 +154,17 @@
     function checkOut() {
         const employeeId = document.getElementById('attendanceEmployeeId').value;
         if (!employeeId || employeeId === '') {
-            alert('Please select an employee first!');
+            Utils.showNotification('Please select an employee first!', 'error');
             return;
         }
-        fetch(`/api/attendance/checkout/${employeeId}`, { method: 'POST' })
+        
+        Utils.apiRequest(`/api/attendance/checkout/${employeeId}`, { method: 'POST' })
             .then(response => {
-                if(response.ok) {
-                    alert('Checked-out successfully!');
-                    return response.json();
-                } else {
-                    alert('Check-out failed!');
-                    console.error('Check-out failed:', response.status, response.statusText);
-                }
+                Utils.showNotification('Employee checked-out successfully!', 'success');
+                // Reset selection
+                document.getElementById('attendanceEmployeeId').value = '';
             })
             .catch(error => {
-                alert('Check-out error: ' + error.message);
                 console.error('Check-out error:', error);
             });
     }

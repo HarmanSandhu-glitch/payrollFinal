@@ -2,52 +2,137 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Manage Leaves</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management - APC Payroll System</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>📋</text></svg>">
 </head>
 <body>
 <header>
-    <h1>Payroll Management System</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="employees.html">Employees</a>
-        <a href="departments.html">Departments</a>
-        <a href="positions.html">Positions</a>
-        <a href="payroll.html">Payroll</a>
-        <a href="attendance.html">Attendance</a>
-        <a href="leaves.html">Leaves</a>
-    </nav>
+    <div class="app-bar">
+        <h1>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">business</span>
+            APC Payroll System
+        </h1>
+        <nav>
+            <a href="index.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">home</span>
+                Home
+            </a>
+            <a href="employees.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">people</span>
+                Employees
+            </a>
+            <a href="departments.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">corporate_fare</span>
+                Departments
+            </a>
+            <a href="positions.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">work</span>
+                Positions
+            </a>
+            <a href="payroll.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">payments</span>
+                Payroll
+            </a>
+            <a href="attendance.html" class="nav-link">
+                <span class="material-icons" style="font-size: 16px;">schedule</span>
+                Attendance
+            </a>
+            <a href="leaves.html" class="nav-link" style="color: var(--md-sys-color-primary);">
+                <span class="material-icons" style="font-size: 16px;">event_busy</span>
+                Leaves
+            </a>
+        </nav>
+    </div>
 </header>
 
 <main>
-    <h2>Manage Leaves</h2>
+    <div class="md-card md-card-elevated">
+        <h2>
+            <span class="material-icons" style="vertical-align: middle; margin-right: 12px;">event_busy</span>
+            Leave Management
+        </h2>
+        <p style="text-align: center; color: var(--md-sys-color-on-surface-variant); margin-bottom: 2rem;">
+            Submit leave requests and track leave status for all employees
+        </p>
+    </div>
 
     <div class="form-container">
-        <form onsubmit="applyForLeave(event)">
-            <h3>Apply for Leave</h3>
-            <label for="leaveEmployeeId">Select Employee</label>
-            <select id="leaveEmployeeId" required></select>
-            <label for="startDate">Start Date</label>
-            <input type="date" id="startDate" required>
-            <label for="endDate">End Date</label>
-            <input type="date" id="endDate" required>
-            <label for="reason">Reason</label>
-            <input type="text" id="reason">
-            <button type="submit">Apply</button>
-        </form>
+        <div class="form-header">
+            <h3 class="form-title">
+                <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">event_available</span>
+                Apply for Leave
+            </h3>
+        </div>
+        <div class="form-content">
+            <form onsubmit="applyForLeave(event)">
+                <div class="md-textfield">
+                    <select id="leaveEmployeeId" required>
+                        <option value="">Select an employee...</option>
+                    </select>
+                    <label for="leaveEmployeeId">Employee</label>
+                </div>
+                
+                <div class="md-textfield">
+                    <input type="date" id="startDate" required>
+                    <label for="startDate">Start Date</label>
+                </div>
+                
+                <div class="md-textfield">
+                    <input type="date" id="endDate" required>
+                    <label for="endDate">End Date</label>
+                </div>
+                
+                <div class="md-textfield">
+                    <input type="text" id="reason" required placeholder=" ">
+                    <label for="reason">Reason for Leave</label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="md-button md-button-filled">
+                        <span class="material-icons" style="font-size: 18px;">send</span>
+                        Submit Request
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <div class="table-container">
-        <h3>All Leave Requests</h3>
+        <div class="table-header">
+            <h3 class="table-title">
+                <span class="material-icons" style="vertical-align: middle; margin-right: 8px;">list_alt</span>
+                Leave Requests
+            </h3>
+        </div>
         <table id="leavesTable">
             <thead>
             <tr>
-                <th>Employee</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Reason</th>
-                <th>Status</th>
-                <th>Actions</th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">person</span>
+                    Employee
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">event</span>
+                    Start Date
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">event</span>
+                    End Date
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">description</span>
+                    Reason
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">info</span>
+                    Status
+                </th>
+                <th>
+                    <span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">settings</span>
+                    Actions
+                </th>
             </tr>
             </thead>
             <tbody>
